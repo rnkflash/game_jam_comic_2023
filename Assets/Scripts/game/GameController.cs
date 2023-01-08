@@ -11,12 +11,10 @@ public class GameController : MonoBehaviour
 
     void Awake() {
         CreatePlayer();
-        EventBus<PlayerDecisionMade>.Sub(OnPlayerDecision);
     }
 
     void OnDestroy() {
         DestroyPlayer();
-        EventBus<PlayerDecisionMade>.Unsub(OnPlayerDecision);
     }
     
     private void CreatePlayer() {
@@ -25,15 +23,6 @@ public class GameController : MonoBehaviour
 
     private void DestroyPlayer() {
         Player.Instance = null;
-    }
-
-    private void OnPlayerDecision(PlayerDecisionMade msg) {
-
-        if (msg.decision == PlayerDecision.Yes)
-            SceneController.Instance.LoadVictoryScene();
-
-        if (msg.decision == PlayerDecision.No)
-            SceneController.Instance.LoadLoseScene();
     }
 
     private IEnumerator Start()
@@ -61,7 +50,18 @@ public class GameController : MonoBehaviour
                     break;
                 case GameState.SituationConclusion:
                     yield return situationConclusionController.StartConclusion();
-                    state = GameState.SituationStart;
+
+                    if (Player.Instance.distance >= 100) {
+                        state = GameState.Win;
+                    } else
+                    if (
+                        Player.Instance.food <= 0 ||
+                        Player.Instance.fuel <= 0 ||
+                        Player.Instance.money <= 0
+                    ) {
+                        state = GameState.Lose;
+                    } else
+                        state = GameState.SituationStart;
                     break;
                 case GameState.Win:
                     SceneController.Instance.LoadVictoryScene();

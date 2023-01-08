@@ -5,7 +5,7 @@ public class Player
 {
     public static Player Instance;
 
-    public int distance = 100;
+    public float distance = 100;
     public int money = 100;
     public int food = 99;
     public int fuel = 100;
