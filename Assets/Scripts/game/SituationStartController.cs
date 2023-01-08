@@ -26,16 +26,16 @@ public class SituationStartController : MonoBehaviour {
         ui.SetActive(true);
 
         card = new CardStaticData() {
-            Question = "just a debug situation",
-            YesFuel = 10,
-            YesFood = 10,
-            YesDistance = 10,
-            YesMoney = 10,
+            Question = "just a debug situation " + Random.Range(0,999),
+            YesFuel = Random.Range(0,10),
+            YesFood = Random.Range(0,10),
+            YesDistance = Random.Range(0,10.0f),
+            YesMoney = Random.Range(0,10),
 
-            NoFood = -10,
+            NoFood = Random.Range(0,-10),
             NoDistance = 0,
-            NoFuel = -10,
-            NoMoney = -10
+            NoFuel = Random.Range(0,-10),
+            NoMoney = Random.Range(0,-10),
         };
 
         questionText.text = card.Question;

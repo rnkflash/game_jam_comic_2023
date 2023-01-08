@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
                 case GameState.Start:
                     Player.Instance.money = 100;
                     Player.Instance.fuel = 100;
-                    Player.Instance.food = 55;
+                    Player.Instance.food = 100;
                     Player.Instance.distance = 0;
                     EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
 
