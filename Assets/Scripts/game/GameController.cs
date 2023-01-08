@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    void Awake() {
+        (new Player()).Init();
+        Player.Instance.money = 100;
+        Player.Instance.fuel = 100;
+        Player.Instance.food = 55;
+        Player.Instance.onResourcesChanged?.Invoke();
+    }
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    void OnDestroy() {
+        Player.Instance.Destroy();
+    }
+    
     void Update()
     {
         
