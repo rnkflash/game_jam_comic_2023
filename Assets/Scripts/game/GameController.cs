@@ -5,32 +5,31 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     void Awake() {
-        (new Player()).Init();
-        Player.Instance.money = 100;
-        Player.Instance.fuel = 100;
-        Player.Instance.food = 55;
-        Player.Instance.onResourcesChanged?.Invoke();
-    }
-
-    void Start()
-    {
-        
+        CreatePlayer();
+        EventBus<PlayerDecisionMade>.Sub(OnPlayerDecision);
     }
 
     void OnDestroy() {
-        Player.Instance.Destroy();
+        Player.Instance = null;
+
+        EventBus<PlayerDecisionMade>.Unsub(OnPlayerDecision);
     }
     
-    void Update()
-    {
-        
+    private void CreatePlayer() {
+        Player.Instance = new Player();
+        Player.Instance.money = 100;
+        Player.Instance.fuel = 100;
+        Player.Instance.food = 55;
+
+        EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
     }
 
-    public void OnWinClicked() {
-        SceneController.Instance.LoadVictoryScene();
-    }
+    private void OnPlayerDecision(PlayerDecisionMade msg) {
 
-    public void OnLoseClicked() {
-        SceneController.Instance.LoadLoseScene();
+        if (msg.decision == PlayerDecision.Yes)
+            SceneController.Instance.LoadVictoryScene();
+
+        if (msg.decision == PlayerDecision.No)
+            SceneController.Instance.LoadLoseScene();
     }
 }

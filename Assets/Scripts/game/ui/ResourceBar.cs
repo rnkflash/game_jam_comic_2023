@@ -8,23 +8,20 @@ public class ResourceBar : MonoBehaviour
     public TMP_Text foodCountTXT;
     public TMP_Text fuelCountTXT;
     public TMP_Text moneyCountTXT;
+    public TMP_Text distanceCountTXT;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Player.Instance.onResourcesChanged += OnResourcesChanged;
-        OnResourcesChanged();
+    void Awake() {
+        EventBus<PlayerResourcesChanged>.Sub(OnPlayerResourcesChanged);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void OnDestroy() {
+        EventBus<PlayerResourcesChanged>.Unsub(OnPlayerResourcesChanged);
+    }    
 
-    void OnResourcesChanged() {
+    private void OnPlayerResourcesChanged(PlayerResourcesChanged msg) {
         foodCountTXT.text = Player.Instance.food.ToString();
         fuelCountTXT.text = Player.Instance.fuel.ToString();
         moneyCountTXT.text = Player.Instance.money.ToString();
+        distanceCountTXT.text = Player.Instance.distance.ToString();
     }
 }
