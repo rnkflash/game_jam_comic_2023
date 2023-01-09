@@ -2,12 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GameState
+{
+    Start,
+    SituationStart,
+    PlayerDecision,
+    SituationConclusion,
+    Win,
+    Lose,
+    Exit
+}
+
 public class GameController : MonoBehaviour
 {
     private GameState state = GameState.Start;
     public SituationStartController situationStartController;
     public PlayerDecisionController playerDecisionController;
     public SituationConclusionController situationConclusionController;
+    public WinController winController;
+    public LoseController loseController;
 
     void Awake() {
         CreatePlayer();
@@ -64,10 +77,15 @@ public class GameController : MonoBehaviour
                         state = GameState.SituationStart;
                     break;
                 case GameState.Win:
-                    SceneController.Instance.LoadVictoryScene();
-                    yield break;
+                    yield return winController.Show();
+                    state = GameState.Exit;
+                    break;
                 case GameState.Lose:
-                    SceneController.Instance.LoadLoseScene();
+                    yield return loseController.Show();
+                    state = GameState.Exit;
+                    break;
+                case GameState.Exit:
+                    SceneController.Instance.LoadMainMenu();
                     yield break;
             }
         }

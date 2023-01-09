@@ -19,16 +19,6 @@ public class SceneController : Singleton<SceneController>
 		await LoadSceneAsync("game", LoadSceneMode.Single);
 	}
 
-	public async void LoadVictoryScene()
-	{
-		await LoadSceneAsync("victory", LoadSceneMode.Single);
-	}
-
-	public async void LoadLoseScene()
-	{
-		await LoadSceneAsync("lose", LoadSceneMode.Single);
-	}
-
 	private async Task LoadSceneAsync(string sceneName, LoadSceneMode mode)
 	{
 		var loadOp = SceneManager.LoadSceneAsync(sceneName, mode);
