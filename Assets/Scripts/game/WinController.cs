@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using DG.Tweening;
 
 public enum WinControllerState { 
     Start,
@@ -12,6 +15,9 @@ public class WinController : MonoBehaviour
 {
     private WinControllerState state;
     public GameObject ui;
+    public Image bg;
+    public GameObject popup;
+    public TMP_Text pressAnyKeyText;
 
     public IEnumerator Show()
     { 
@@ -19,18 +25,20 @@ public class WinController : MonoBehaviour
 
         ui.SetActive(true);
         SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("victory"));
-        StartCoroutine(Wait1Sec());
+        
+        bg.DOFade(0.9f, 0.5f);
+
+        var origPos = popup.transform.position;
+        popup.transform.position = new Vector3(origPos.x, 1000, origPos.z);
+        popup.transform.DOMove(origPos, 0.5f).SetEase(Ease.OutCubic).OnComplete(()=> {
+            pressAnyKeyText.DOFade(1, .25f);
+            state = WinControllerState.PressAnyKey;
+        });
 
         while (state != WinControllerState.Exit)
         {
             yield return null;
         }
-    }
-
-    IEnumerator Wait1Sec()
-    {
-        yield return new WaitForSeconds(1);
-        state = WinControllerState.PressAnyKey;
     }
 
     void Update() {

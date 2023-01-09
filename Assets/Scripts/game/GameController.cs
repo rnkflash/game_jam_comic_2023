@@ -15,7 +15,7 @@ public enum GameState
 
 public class GameController : MonoBehaviour
 {
-    private GameState state = GameState.Start;
+    private GameState state;
     public SituationStartController situationStartController;
     public PlayerDecisionController playerDecisionController;
     public SituationConclusionController situationConclusionController;
@@ -23,21 +23,14 @@ public class GameController : MonoBehaviour
     public LoseController loseController;
 
     void Awake() {
-        CreatePlayer();
+        Player.Instance = new Player();
+        state = GameState.Start;
     }
 
     void OnDestroy() {
-        DestroyPlayer();
-    }
-    
-    private void CreatePlayer() {
-        Player.Instance = new Player();
-    }
-
-    private void DestroyPlayer() {
         Player.Instance = null;
     }
-
+    
     private IEnumerator Start()
     {
         while (true)

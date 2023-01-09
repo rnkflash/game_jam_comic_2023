@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum LoseControllerState { 
     Start,
@@ -12,6 +15,9 @@ public class LoseController : MonoBehaviour
 {
     private LoseControllerState state;
     public GameObject ui;
+    public Image bg;
+    public GameObject popup;
+    public TMP_Text pressAnyKeyText;
 
     public IEnumerator Show()
     { 
@@ -19,20 +25,21 @@ public class LoseController : MonoBehaviour
 
         ui.SetActive(true);
         SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("paper_check"));
-        StartCoroutine(Wait1Sec());
+
+        bg.DOFade(0.9f, 0.5f);
+        
+        var origPos = popup.transform.position;
+        popup.transform.position = new Vector3(origPos.x, 1000, origPos.z);
+        popup.transform.DOMove(origPos, 0.5f).SetEase(Ease.OutCubic).OnComplete(()=> {
+            pressAnyKeyText.DOFade(1, .25f);
+            state = LoseControllerState.PressAnyKey;
+        });
 
         while (state != LoseControllerState.Exit)
         {
             yield return null;
         }
     }
-
-    IEnumerator Wait1Sec()
-    {
-        yield return new WaitForSeconds(1);
-        state = LoseControllerState.PressAnyKey;
-    }
-
 
     void Update() {
         
