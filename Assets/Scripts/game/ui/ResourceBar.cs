@@ -24,7 +24,7 @@ public class ResourceBar : MonoBehaviour
         foodBar.Init(0, 100);
         fuelBar.Init(0, 100);
         moneyBar.Init(0, 100);
-        distanceBar.Init(0, 100);
+        distanceBar.Init(0, 20000);
 
         EventBus<PlayerResourcesChanged>.Sub(OnPlayerResourcesChanged);
     }
