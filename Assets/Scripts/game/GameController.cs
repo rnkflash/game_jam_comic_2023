@@ -51,7 +51,7 @@ public class GameController : MonoBehaviour
                 case GameState.SituationConclusion:
                     yield return situationConclusionController.StartConclusion();
 
-                    if (Player.Instance.distance >= 100) {
+                    if (Player.Instance.distance >= 20000) {
                         state = GameState.Win;
                     } else
                     if (
