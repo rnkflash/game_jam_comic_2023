@@ -55,7 +55,7 @@ public class PlayerDecisionController : MonoBehaviour {
         ui.SetActive(false);
         situationUI.SetActive(false);
         answerUI.SetActive(true);
-        if (lastDecision == PlayerDecision.Yes) answerText.text = SituationStartController.card.YesAnswer;
-        else answerText.text = SituationStartController.card.NoAnswer;
+        if (lastDecision == PlayerDecision.Yes) answerText.text = SituationStartController.card.DialogSegments[0].YesAnswer;
+        else answerText.text = SituationStartController.card.DialogSegments[0].NoAnswer;
     }
 }

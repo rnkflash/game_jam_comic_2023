@@ -1479,6 +1479,7 @@ MonoBehaviour:
   ui: {fileID: 1877601496}
   answerUI: {fileID: 1876218869}
   answerText: {fileID: 875374027}
+  situationUI: {fileID: 1588682423}
 --- !u!1 &661869561
 GameObject:
   m_ObjectHideFlags: 0

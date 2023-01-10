@@ -20,19 +20,19 @@ public class SituationConclusionController : MonoBehaviour {
         ui.SetActive(true);
 
         if (PlayerDecisionController.lastDecision == PlayerDecision.Yes) {
-            Player.Instance.fuel += SituationStartController.card.YesFuel;
-            Player.Instance.money += SituationStartController.card.YesMoney;
-            Player.Instance.food += SituationStartController.card.YesFood;
-            Player.Instance.distance += SituationStartController.card.YesDistance;
+            Player.Instance.fuel += SituationStartController.card.DialogSegments[0].YesFuel;
+            Player.Instance.money += SituationStartController.card.DialogSegments[0].YesMoney;
+            Player.Instance.food += SituationStartController.card.DialogSegments[0].YesFood;
+            Player.Instance.distance += SituationStartController.card.DialogSegments[0].YesDistance;
 
             EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
         }
 
         if (PlayerDecisionController.lastDecision == PlayerDecision.No) {
-            Player.Instance.fuel += SituationStartController.card.NoFuel;
-            Player.Instance.money += SituationStartController.card.NoMoney;
-            Player.Instance.food += SituationStartController.card.NoFood;
-            Player.Instance.distance += SituationStartController.card.NoDistance;
+            Player.Instance.fuel += SituationStartController.card.DialogSegments[0].NoFuel;
+            Player.Instance.money += SituationStartController.card.DialogSegments[0].NoMoney;
+            Player.Instance.food += SituationStartController.card.DialogSegments[0].NoFood;
+            Player.Instance.distance += SituationStartController.card.DialogSegments[0].NoDistance;
 
             EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
         }
