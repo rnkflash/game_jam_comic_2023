@@ -20,7 +20,9 @@ MonoBehaviour:
   YesFuel: 10
   YesMoney: 10
   YesDistance: 2000
+  YesAnswer: "\u041E\u0447\u0435\u043D\u044C \u0445\u043E\u0440\u043E\u0448\u043E"
   NoFood: -10
   NoFuel: -10
   NoMoney: -10
   NoDistance: -10
+  NoAnswer: "\u041E\u0447\u0435\u043D\u044C \u043F\u043B\u043E\u0445\u043E"

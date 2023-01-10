@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public enum PlayerDecisionControllerState { 
@@ -14,6 +15,9 @@ public class PlayerDecisionController : MonoBehaviour {
     private PlayerDecisionControllerState state;
 
     public GameObject ui;
+    public GameObject answerUI;
+    public TMP_Text answerText;
+    public GameObject situationUI;
 
     public static PlayerDecision lastDecision;
 
@@ -36,11 +40,22 @@ public class PlayerDecisionController : MonoBehaviour {
             yield return null;
         }
     }
+    void Update() {
+        if (state == PlayerDecisionControllerState.Show && (Input.GetMouseButtonDown(0) || Input.anyKeyDown))
+        {
+            state = PlayerDecisionControllerState.Exit;
+            answerUI.SetActive(false);
+        }
+    }
 
     private void OnPlayerDecision(PlayerDecisionMade msg) {
 
+        state = PlayerDecisionControllerState.Show;
         lastDecision = msg.decision;
         ui.SetActive(false);
-        state = PlayerDecisionControllerState.Exit;
+        situationUI.SetActive(false);
+        answerUI.SetActive(true);
+        if (lastDecision == PlayerDecision.Yes) answerText.text = SituationStartController.card.YesAnswer;
+        else answerText.text = SituationStartController.card.NoAnswer;
     }
 }
