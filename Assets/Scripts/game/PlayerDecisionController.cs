@@ -20,6 +20,9 @@ public class PlayerDecisionController : MonoBehaviour {
     public GameObject situationUI;
 
     public static PlayerDecision lastDecision;
+    public bool DialogNotFinished;
+
+    private int _dialogNumber;
 
     void Awake() {
         EventBus<PlayerDecisionMade>.Sub(OnPlayerDecision);
@@ -29,10 +32,12 @@ public class PlayerDecisionController : MonoBehaviour {
         EventBus<PlayerDecisionMade>.Unsub(OnPlayerDecision);
     }
 
-    public IEnumerator StartMakingDecision()
+    public IEnumerator StartMakingDecision(int dialogNumber)
     {
         state = PlayerDecisionControllerState.Start;
 
+        _dialogNumber = dialogNumber;
+        
         ui.SetActive(true);
 
         while (state != PlayerDecisionControllerState.Exit)
@@ -55,7 +60,15 @@ public class PlayerDecisionController : MonoBehaviour {
         ui.SetActive(false);
         situationUI.SetActive(false);
         answerUI.SetActive(true);
-        if (lastDecision == PlayerDecision.Yes) answerText.text = SituationStartController.card.DialogSegments[0].YesAnswer;
-        else answerText.text = SituationStartController.card.DialogSegments[0].NoAnswer;
+        if (lastDecision == PlayerDecision.Yes)
+        {
+            answerText.text = SituationStartController.card.DialogSegments[_dialogNumber].YesAnswer;
+            DialogNotFinished = SituationStartController.card.DialogSegments[_dialogNumber].NextDialogYes;
+        }
+        else
+        {
+            answerText.text = SituationStartController.card.DialogSegments[_dialogNumber].NoAnswer;
+            DialogNotFinished = SituationStartController.card.DialogSegments[_dialogNumber].NextDialogNo;
+        }
     }
 }

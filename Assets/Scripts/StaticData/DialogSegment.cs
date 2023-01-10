@@ -15,6 +15,8 @@ namespace StaticData
     public float YesDistance;
     [TextArea(5, 100)]
     public string YesAnswer;
+
+    public bool NextDialogYes;
     
     [Header("No option")]
     public int NoFood;
@@ -23,5 +25,7 @@ namespace StaticData
     public float NoDistance;
     [TextArea(5, 100)]
     public string NoAnswer;
+    
+    public bool NextDialogNo;
   }
 }

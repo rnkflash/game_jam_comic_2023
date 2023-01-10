@@ -42,7 +42,6 @@ public class SituationStartController : MonoBehaviour
 
     card = GetEventCard();
 
-    questionText.text = card.DialogSegments[0].Question;
     state = SituationStartControllerState.Exit;
 
     while (state != SituationStartControllerState.Exit)

@@ -13,26 +13,26 @@ public class SituationConclusionController : MonoBehaviour {
 
     public GameObject ui;
 
-    public IEnumerator StartConclusion()
+    public IEnumerator StartConclusion(int dialogNumber)
     {
         state = SituationConclusionControllerState.Show;
 
         ui.SetActive(true);
 
         if (PlayerDecisionController.lastDecision == PlayerDecision.Yes) {
-            Player.Instance.fuel += SituationStartController.card.DialogSegments[0].YesFuel;
-            Player.Instance.money += SituationStartController.card.DialogSegments[0].YesMoney;
-            Player.Instance.food += SituationStartController.card.DialogSegments[0].YesFood;
-            Player.Instance.distance += SituationStartController.card.DialogSegments[0].YesDistance;
+            Player.Instance.fuel += SituationStartController.card.DialogSegments[dialogNumber].YesFuel;
+            Player.Instance.money += SituationStartController.card.DialogSegments[dialogNumber].YesMoney;
+            Player.Instance.food += SituationStartController.card.DialogSegments[dialogNumber].YesFood;
+            Player.Instance.distance += SituationStartController.card.DialogSegments[dialogNumber].YesDistance;
 
             EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
         }
 
         if (PlayerDecisionController.lastDecision == PlayerDecision.No) {
-            Player.Instance.fuel += SituationStartController.card.DialogSegments[0].NoFuel;
-            Player.Instance.money += SituationStartController.card.DialogSegments[0].NoMoney;
-            Player.Instance.food += SituationStartController.card.DialogSegments[0].NoFood;
-            Player.Instance.distance += SituationStartController.card.DialogSegments[0].NoDistance;
+            Player.Instance.fuel += SituationStartController.card.DialogSegments[dialogNumber].NoFuel;
+            Player.Instance.money += SituationStartController.card.DialogSegments[dialogNumber].NoMoney;
+            Player.Instance.food += SituationStartController.card.DialogSegments[dialogNumber].NoFood;
+            Player.Instance.distance += SituationStartController.card.DialogSegments[dialogNumber].NoDistance;
 
             EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
         }

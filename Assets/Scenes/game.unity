@@ -1135,6 +1135,7 @@ MonoBehaviour:
   situationStartController: {fileID: 1189884817}
   playerDecisionController: {fileID: 586146932}
   situationConclusionController: {fileID: 1976666977}
+  dialogController: {fileID: 2058716029}
   winController: {fileID: 1506216418}
   loseController: {fileID: 106094140}
 --- !u!4 &425984360
@@ -1480,6 +1481,7 @@ MonoBehaviour:
   answerUI: {fileID: 1876218869}
   answerText: {fileID: 875374027}
   situationUI: {fileID: 1588682423}
+  isDialogEnded: 0
 --- !u!1 &661869561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,6 +2569,7 @@ Transform:
   - {fileID: 1976666976}
   - {fileID: 1506216417}
   - {fileID: 106094139}
+  - {fileID: 2058716028}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3838,6 +3841,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1588682423}
+--- !u!1 &2058716027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2058716028}
+  - component: {fileID: 2058716029}
+  m_Layer: 0
+  m_Name: DialogController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2058716028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058716027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1229098452}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2058716029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058716027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ce5ede047743f2a153797a40d696ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI: {fileID: 1588682423}
+  questionText: {fileID: 557917495}
 --- !u!1001 &412045175515181845
 PrefabInstance:
   m_ObjectHideFlags: 0

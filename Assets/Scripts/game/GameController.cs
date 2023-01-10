@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using game;
 using UnityEngine;
 
 public enum GameState
 {
     Start,
     SituationStart,
+    Dialog,
     PlayerDecision,
     SituationConclusion,
     Win,
@@ -19,8 +21,10 @@ public class GameController : MonoBehaviour
     public SituationStartController situationStartController;
     public PlayerDecisionController playerDecisionController;
     public SituationConclusionController situationConclusionController;
+    public DialogController dialogController;
     public WinController winController;
     public LoseController loseController;
+    private int dialogNumber = 0;
 
     void Awake() {
         Player.Instance = new Player();
@@ -48,26 +52,31 @@ public class GameController : MonoBehaviour
                     break;
                 case GameState.SituationStart:
                     yield return situationStartController.StartNextSituation();
+                    state = GameState.Dialog;
+                    break;
+                case GameState.Dialog:
+                    yield return dialogController.StartNextDialogue(dialogNumber);
                     state = GameState.PlayerDecision;
                     break;
                 case GameState.PlayerDecision:
-                    yield return playerDecisionController.StartMakingDecision();
+                    yield return playerDecisionController.StartMakingDecision(dialogNumber);
                     state = GameState.SituationConclusion;
                     break;
                 case GameState.SituationConclusion:
-                    yield return situationConclusionController.StartConclusion();
+                    yield return situationConclusionController.StartConclusion(dialogNumber);
 
-                    if (Player.Instance.distance >= 20000) {
-                        state = GameState.Win;
-                    } else
-                    if (
-                        Player.Instance.food <= 0 ||
-                        Player.Instance.fuel <= 0 ||
-                        Player.Instance.money <= 0
-                    ) {
-                        state = GameState.Lose;
-                    } else
+                    if (WinCheck()) state = GameState.Win;
+                    else if (LooseCheck()) state = GameState.Lose;
+                    else if (playerDecisionController.DialogNotFinished)
+                    {
+                        dialogNumber++;
+                        state = GameState.Dialog;
+                    }
+                    else
+                    {
+                        dialogNumber = 0;
                         state = GameState.SituationStart;
+                    }
                     break;
                 case GameState.Win:
                     yield return winController.Show();
@@ -82,5 +91,17 @@ public class GameController : MonoBehaviour
                     yield break;
             }
         }
+    }
+
+    private static bool LooseCheck()
+    {
+        return Player.Instance.food <= 0 ||
+               Player.Instance.fuel <= 0 ||
+               Player.Instance.money <= 0;
+    }
+
+    private static bool WinCheck()
+    {
+        return Player.Instance.distance >= 20000;
     }
 }

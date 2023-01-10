@@ -20,10 +20,12 @@ MonoBehaviour:
     YesFood: 0
     YesFuel: 0
     YesMoney: 0
-    YesDistance: 0
-    YesAnswer: 
+    YesDistance: 2000
+    YesAnswer: "\u041E\u0447\u0435\u043D\u044C \u0445\u043E\u0440\u043E\u0448\u043E"
+    NextDialogYes: 0
     NoFood: 0
     NoFuel: 0
     NoMoney: 0
-    NoDistance: 0
-    NoAnswer: 
+    NoDistance: -10
+    NoAnswer: "\u041E\u0447\u0435\u043D\u044C \u043F\u043B\u043E\u0445\u043E"
+    NextDialogNo: 0
