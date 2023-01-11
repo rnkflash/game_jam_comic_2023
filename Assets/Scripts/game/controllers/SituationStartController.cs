@@ -44,6 +44,7 @@ public class SituationStartController : MonoBehaviour
 
     if (selectedCard != null) {
       Player.Instance.usedCards.Add(selectedCard.id);
+      Player.Instance.prevDialog = -1;
       Player.Instance.dialog = selectedCard.dialogs[0].id;
     }
 

@@ -17,6 +17,7 @@ public class SituationConclusionController : MonoBehaviour {
 
         var choice = Player.Instance.GetCurrentChoice();
 
+        Player.Instance.prevDialog = Player.Instance.dialog;
         Player.Instance.dialog = -1;
         choice.actions.ForEach(action => DoAction(action));
 

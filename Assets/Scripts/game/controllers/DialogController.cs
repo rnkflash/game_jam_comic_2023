@@ -40,31 +40,34 @@ namespace game
     private IEnumerator ShowCardAnimation() {
       state = DialogueControllerState.ShowCardAnimation;
       var dialog = Player.Instance.GetCurrentDialog();
+      var prevDialog = Player.Instance.GetPrevDialog();
 
-      frontCard.SetActive(false);
-      backCard.SetActive(false);
+      if (prevDialog == null || prevDialog.character != dialog.character) {
+        frontCard.SetActive(false);
+        backCard.SetActive(false);
 
-      yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.25f);
 
-      frontCard.SetActive(false);
-      backCard.SetActive(true);
+        frontCard.SetActive(false);
+        backCard.SetActive(true);
 
-      yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.25f);
 
-      var character = Characters.Instance.GetCharacterCard(dialog.character);
-      var backImage = backCard.GetComponent<Image>();
-      var frontImage = frontCard.GetComponent<Image>();
-      Sprite spr;
-      if (character != null)
-        spr = character.image;
-      else
-        spr = backImage.sprite;
-      frontImage.sprite = spr;
+        var character = Characters.Instance.GetCharacterCard(dialog.character);
+        var backImage = backCard.GetComponent<Image>();
+        var frontImage = frontCard.GetComponent<Image>();
+        Sprite spr;
+        if (character != null)
+          spr = character.image;
+        else
+          spr = backImage.sprite;
+        frontImage.sprite = spr;
 
-      frontCard.SetActive(true);
-      backCard.SetActive(false);
+        frontCard.SetActive(true);
+        backCard.SetActive(false);
 
-      yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.25f);
+      }
       
       dialogUI.SetActive(true);
       text.text = dialog.text;

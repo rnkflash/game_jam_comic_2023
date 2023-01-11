@@ -13,6 +13,7 @@ public class Player: MonoBehaviour
 
     public ReignsTypeCard card = null;
     public int dialog = -1;
+    public int prevDialog = -1;
     public List<string> usedCards;
     public Choice choice;
 
@@ -29,6 +30,12 @@ public class Player: MonoBehaviour
             return null;
         return card.dialogs[dialog];
     }
+
+    public ReignsTypeCard.Dialog GetPrevDialog() {
+        if (prevDialog == -1)
+            return null;
+        return card.dialogs[prevDialog];
+    }    
 
     public ReignsTypeCard.Choice GetCurrentChoice() {
         ReignsTypeCard.Choice choiceData;
