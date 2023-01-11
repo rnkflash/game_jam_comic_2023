@@ -9,7 +9,9 @@ public enum GameState
     SituationStart,
     Dialog,
     PlayerDecision,
+    Aftermath,
     SituationConclusion,
+    WinCheck,
     Win,
     Lose,
     Exit
@@ -18,21 +20,28 @@ public enum GameState
 public class GameController : MonoBehaviour
 {
     private GameState state;
-    public SituationStartController situationStartController;
-    public PlayerDecisionController playerDecisionController;
-    public SituationConclusionController situationConclusionController;
-    public DialogController dialogController;
-    public WinController winController;
-    public LoseController loseController;
-    private int dialogNumber = 0;
+    private SituationStartController situationStartController;
+    private DialogController dialogController;
+    private PlayerDecisionController playerDecisionController;
+    private AftermathController afterMathController;
+    private SituationConclusionController situationConclusionController;
+    private WinController winController;
+    private LoseController loseController;
 
     void Awake() {
-        Player.Instance = new Player();
+        situationStartController = GetComponent<SituationStartController>();
+        playerDecisionController = GetComponent<PlayerDecisionController>();
+        situationConclusionController = GetComponent<SituationConclusionController>();
+        dialogController = GetComponent<DialogController>();
+        winController = GetComponent<WinController>();
+        loseController = GetComponent<LoseController>();
+        afterMathController = GetComponent<AftermathController>();
+
         state = GameState.Start;
     }
 
     void OnDestroy() {
-        Player.Instance = null;
+        
     }
     
     private IEnumerator Start()
@@ -52,31 +61,44 @@ public class GameController : MonoBehaviour
                     break;
                 case GameState.SituationStart:
                     yield return situationStartController.StartNextSituation();
-                    state = GameState.Dialog;
+                    if (Player.Instance.card == null)
+                        state = GameState.WinCheck;
+                    else
+                        state = GameState.Dialog;
                     break;
                 case GameState.Dialog:
-                    yield return dialogController.StartNextDialogue(dialogNumber);
+                    yield return dialogController.StartNextDialogue();
                     state = GameState.PlayerDecision;
                     break;
                 case GameState.PlayerDecision:
-                    yield return playerDecisionController.StartMakingDecision(dialogNumber);
+                    yield return playerDecisionController.StartMakingDecision();
+                    state = GameState.Aftermath;
+                    break;
+                case GameState.Aftermath:
+                    if (Player.Instance.GetCurrentChoice().aftermath != "")
+                        yield return afterMathController.ShowAftermath();
                     state = GameState.SituationConclusion;
                     break;
                 case GameState.SituationConclusion:
-                    yield return situationConclusionController.StartConclusion(dialogNumber);
+                    yield return situationConclusionController.StartConclusion();
 
-                    if (WinCheck()) state = GameState.Win;
-                    else if (LooseCheck()) state = GameState.Lose;
-                    else if (playerDecisionController.DialogNotFinished)
-                    {
-                        dialogNumber++;
+                    if (Player.Instance.dialog != -1)
                         state = GameState.Dialog;
-                    }
                     else
-                    {
-                        dialogNumber = 0;
+                        state = GameState.WinCheck;
+
+                    break;
+                case GameState.WinCheck:
+
+                    if (WinCheck()) 
+                        state = GameState.Win;
+                    else if (LooseCheck()) 
+                        state = GameState.Lose;
+                    else if (Player.Instance.card == null)
+                        state = GameState.Lose;
+                    else
                         state = GameState.SituationStart;
-                    }
+                    
                     break;
                 case GameState.Win:
                     yield return winController.Show();

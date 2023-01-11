@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using StaticData;
 using UnityEngine;
 
 public class BootController : MonoBehaviour
