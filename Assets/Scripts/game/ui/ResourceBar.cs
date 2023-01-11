@@ -13,19 +13,18 @@ public class ResourceBar : MonoBehaviour
     private ProgressBarAnimated foodBar;
     private ProgressBarAnimated fuelBar;
     private ProgressBarAnimated moneyBar;
-    private ProgressBarAnimated distanceBar;
+    private TextMeshProUGUI distanceBar;
 
     void Awake() {
         foodBar = food.GetComponentInChildren<ProgressBarAnimated>();
         fuelBar = fuel.GetComponentInChildren<ProgressBarAnimated>();
         moneyBar = money.GetComponentInChildren<ProgressBarAnimated>();
-        distanceBar = distance.GetComponentInChildren<ProgressBarAnimated>();
+        distanceBar = distance.GetComponentInChildren<TextMeshProUGUI>();
 
         foodBar.Init(0, 100);
         fuelBar.Init(0, 100);
         moneyBar.Init(0, 100);
-        distanceBar.Init(0, 20000);
-
+        
         EventBus<PlayerResourcesChanged>.Sub(OnPlayerResourcesChanged);
     }
 
@@ -37,6 +36,6 @@ public class ResourceBar : MonoBehaviour
         foodBar.SetValue(Player.Instance.food);
         fuelBar.SetValue(Player.Instance.fuel);
         moneyBar.SetValue(Player.Instance.money);
-        distanceBar.SetValue(Mathf.FloorToInt(Player.Instance.distance));
+        distanceBar.text = "Осталось проехать: "+$"{20000 - Player.Instance.distance}";
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: idrak_ti_che
   conditions:
-  - whatever: 1
+  - distance: 0
   dialogs:
   - id: 0
     character: 0
