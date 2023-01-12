@@ -39,16 +39,16 @@ public class SituationConclusionController : MonoBehaviour {
             Player.Instance.dialog = action.value;
             break;
         case ReignsTypeCard.Action.ActionType.food:
-            Player.Instance.food += action.value;
+            Player.Instance.food = Mathf.Clamp(Player.Instance.food + action.value, 0, Balance.values.max_food);
             break;
         case ReignsTypeCard.Action.ActionType.fuel:
-            Player.Instance.fuel += action.value;
+            Player.Instance.fuel = Mathf.Clamp(Player.Instance.fuel + action.value, 0, Balance.values.max_fuel);
             break;
         case ReignsTypeCard.Action.ActionType.money:
-            Player.Instance.money += action.value;
+            Player.Instance.money = Mathf.Clamp(Player.Instance.money + action.value, 0, Balance.values.max_money);
             break;
         case ReignsTypeCard.Action.ActionType.distance:
-            Player.Instance.distance += action.value;
+            Player.Instance.distance = Mathf.Clamp(Player.Instance.distance + action.value, 0, Balance.values.max_distance);
             break;
         default:
             break;

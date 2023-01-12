@@ -21,9 +21,9 @@ public class ResourceBar : MonoBehaviour
         moneyBar = money.GetComponentInChildren<ProgressBarAnimated>();
         distanceBar = distance.GetComponentInChildren<TextMeshProUGUI>();
 
-        foodBar.Init(0, 100);
-        fuelBar.Init(0, 100);
-        moneyBar.Init(0, 100);
+        foodBar.Init(0, Balance.values.max_food);
+        fuelBar.Init(0, Balance.values.max_fuel);
+        moneyBar.Init(0, Balance.values.max_money);
         
         EventBus<PlayerResourcesChanged>.Sub(OnPlayerResourcesChanged);
     }
@@ -36,6 +36,7 @@ public class ResourceBar : MonoBehaviour
         foodBar.SetValue(Player.Instance.food);
         fuelBar.SetValue(Player.Instance.fuel);
         moneyBar.SetValue(Player.Instance.money);
-        distanceBar.text = "Осталось проехать: "+$"{20000 - Player.Instance.distance}";
+        var distanceLeft = Mathf.Clamp(Balance.values.max_distance - Player.Instance.distance, 0, Balance.values.max_distance);
+        distanceBar.text = "Осталось проехать: "+$"{distanceLeft}";
     }
 }

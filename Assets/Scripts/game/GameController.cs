@@ -51,10 +51,10 @@ public class GameController : MonoBehaviour
             switch (state)
             {
                 case GameState.Start:
-                    Player.Instance.money = 50;
-                    Player.Instance.fuel = 50;
-                    Player.Instance.food = 50;
-                    Player.Instance.distance = 0;
+                    Player.Instance.money = Balance.values.start_money;
+                    Player.Instance.fuel = Balance.values.start_fuel;
+                    Player.Instance.food = Balance.values.start_food;
+                    Player.Instance.distance = Balance.values.start_distance;
                     EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
 
                     state = GameState.SituationStart;
@@ -124,6 +124,6 @@ public class GameController : MonoBehaviour
 
     private static bool WinCheck()
     {
-        return Player.Instance.distance >= 20000;
+        return Player.Instance.distance >= Balance.values.max_distance;
     }
 }

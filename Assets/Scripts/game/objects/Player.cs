@@ -6,9 +6,9 @@ public class Player: MonoBehaviour
 {
     public static Player Instance;
 
-    public float distance = 100;
+    public float distance = 0;
     public int money = 100;
-    public int food = 99;
+    public int food = 100;
     public int fuel = 100;
 
     public ReignsTypeCard card = null;
