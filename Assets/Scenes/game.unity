@@ -556,9 +556,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87892972082e5c1488fd0a46e3b2988f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: {fileID: 433959054}
-  fuel: {fileID: 349139083}
-  money: {fileID: 1139793405}
+  food: {fileID: 1139793405}
+  fuel: {fileID: 433959054}
+  money: {fileID: 349139083}
   distance: {fileID: 188679162}
 --- !u!114 &172089246
 MonoBehaviour:
@@ -4670,6 +4670,7 @@ MonoBehaviour:
   fuel: 100
   card: {fileID: 0}
   dialog: -1
+  prevDialog: -1
   usedCards: []
   choice: 0
 --- !u!4 &2036902514
