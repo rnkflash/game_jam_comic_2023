@@ -1,0 +1,16 @@
+-- PSD file: image.psd
+assetlist = {
+	"bg" = { pos={   0,   0}, size={1920,1080} },
+	"minibus_3_shadow" = { pos={  28, 909}, size={ 346,  60} },
+	"minibus_3" = { pos={  16, 757}, size={ 330, 201} },
+	"car_Player_shadow" = { pos={ 230, 909}, size={ 258,  60} },
+	"car_Player" = { pos={ 224, 756}, size={ 244, 201} },
+	"minibus_2_shadow" = { pos={ 498, 909}, size={ 345,  60} },
+	"minibus_2" = { pos={ 486, 757}, size={ 330, 201} },
+	"minibus_1_shadow" = { pos={1529, 909}, size={ 320,  60} },
+	"minibus_1" = { pos={1516, 788}, size={ 308, 170} },
+	"gazelka_shadow" = { pos={ 865, 909}, size={ 395,  60} },
+	"gazelka" = { pos={ 838, 675}, size={ 392, 282} },
+	"car_shadow" = { pos={1270, 909}, size={ 233,  60} },
+	"car" = { pos={1259, 784}, size={ 230, 173} },
+}
