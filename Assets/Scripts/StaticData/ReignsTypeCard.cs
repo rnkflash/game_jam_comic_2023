@@ -34,6 +34,7 @@ public class ReignsTypeCard : ScriptableObject
     public class Dialog{
         public int id;
         public Character character;
+        [TextArea(3, 100)]
         public string text;
         public Choice choiceLeft;
         public Choice choiceRight;
@@ -42,6 +43,7 @@ public class ReignsTypeCard : ScriptableObject
     [Serializable]
     public class Choice {
         public string text;
+        [TextArea(3, 100)]
         public string aftermath;
         public List<ActionObject> actions;
     }
