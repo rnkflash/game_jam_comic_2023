@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,6 +15,8 @@ public class ResourceBar : MonoBehaviour
     private ProgressBarAnimated fuelBar;
     private ProgressBarAnimated moneyBar;
     private TextMeshProUGUI distanceBar;
+
+    public TMP_Text debugTriggers;
 
     void Awake() {
         foodBar = food.GetComponentInChildren<ProgressBarAnimated>();
@@ -33,10 +36,14 @@ public class ResourceBar : MonoBehaviour
     }    
 
     private void OnPlayerResourcesChanged(PlayerResourcesChanged msg) {
-        foodBar.SetValue(Player.Instance.food);
-        fuelBar.SetValue(Player.Instance.fuel);
-        moneyBar.SetValue(Player.Instance.money);
-        var distanceLeft = Mathf.Clamp(Balance.values.max_distance - Player.Instance.distance, 0, Balance.values.max_distance);
+        foodBar.SetValue(Player.Instance.GetResource(Resource.food));
+        fuelBar.SetValue(Player.Instance.GetResource(Resource.fuel));
+        moneyBar.SetValue(Player.Instance.GetResource(Resource.money));
+        
+        var distanceLeft = Mathf.Clamp(Balance.values.max_distance - Player.Instance.GetResource(Resource.distance), 0, Balance.values.max_distance);
         distanceBar.text = "Осталось проехать: "+$"{distanceLeft}";
+
+        debugTriggers.text = "";
+        Player.Instance.triggers.ForEach(trigger=>debugTriggers.text += Enum.GetName(typeof(Trigger), trigger));
     }
 }

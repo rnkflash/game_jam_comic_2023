@@ -6,12 +6,28 @@ using System.Collections.Generic;
 public class ReignsTypeCard : ScriptableObject
 {
     public string id;
-    public List<Condition> conditions;
+    public bool enabled = true;
+    public Condition conditions;
     public List<Dialog> dialogs;
 
     [Serializable]
     public class Condition{
-        public int distance;
+        public int priority = 0;
+        public List<TriggerCondition> triggers;
+        public List<ResourceCondition> resources;
+    }
+
+    [Serializable]
+    public class TriggerCondition {
+        public Trigger trigger;
+        public bool have = true;
+    }
+
+    [Serializable]
+    public class ResourceCondition {
+        public Resource resource;
+        public int min = 0;
+        public int max = 100000;
     }
 
     [Serializable]
@@ -27,21 +43,79 @@ public class ReignsTypeCard : ScriptableObject
     public class Choice {
         public string text;
         public string aftermath;
-        public List<Action> actions;
+        public List<ActionObject> actions;
+    }
+
+    [Serializable]
+    public class ActionObject {
+        public ActionType type;
+        [SerializeReference] public Action data;
+
     }
 
     [Serializable]
     public class Action {
-        public ActionType type;
-        public int value;
-
-        public enum ActionType
-        {
-            food,
-            fuel,
-            money,
-            distance,
-            dialog
-        }
+        [HideInInspector] public ActionType type = ActionType.resource;
     }
+
+    [Serializable]
+    public enum ActionType {
+        resource,
+        dialog,
+        trigger
+    }
+
+    [Serializable]
+    public class ResourceAction: Action {
+        public Resource resource;
+        public int amount;
+
+        public ResourceAction() {type=ActionType.resource;resource = Resource.food;amount=0;}
+    }
+
+    [Serializable]
+    public class TriggerAction: Action {
+        public Trigger trigger;
+        public bool have;
+
+        public TriggerAction() {type=ActionType.trigger;}
+    }
+
+    [Serializable]
+    public class DialogAction: Action {
+        public int id;
+
+        public DialogAction() {type=ActionType.dialog;}
+    }
+
+    private void OnValidate()
+    {
+        dialogs.ForEach( dialog => {
+            var choices = new List<Choice>() {dialog.choiceLeft, dialog.choiceRight};
+            choices.ForEach( choice => {
+                Action prevData = null;
+                choice.actions.ForEach( action => {
+                    if (prevData != null && prevData == action.data)
+                        action.data = null;
+                    switch(action.type)
+                    {
+                        case ActionType.resource:
+                            if (action.data == null || action.data != null && action.data.GetType() != typeof(ResourceAction))
+                                action.data = new ResourceAction();
+                            break;
+                        case ActionType.dialog:
+                            if (action.data == null || action.data != null && action.data.GetType() != typeof(DialogAction))
+                                action.data = new DialogAction();
+                            break;
+                        case ActionType.trigger:
+                            if (action.data == null || action.data != null && action.data.GetType() != typeof(TriggerAction))
+                                action.data = new TriggerAction();
+                            break;
+                    }
+                    prevData = action.data;
+                });
+            });
+            
+        });
+    }    
 }

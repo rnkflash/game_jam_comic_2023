@@ -19,7 +19,7 @@ public class SituationConclusionController : MonoBehaviour {
 
         Player.Instance.prevDialog = Player.Instance.dialog;
         Player.Instance.dialog = -1;
-        choice.actions.ForEach(action => DoAction(action));
+        choice.actions.ForEach(action => DoAction(action.data));
 
         EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
 
@@ -33,25 +33,18 @@ public class SituationConclusionController : MonoBehaviour {
     }
 
     private void DoAction(ReignsTypeCard.Action action) {
-        switch(action.type) 
-        {
-        case ReignsTypeCard.Action.ActionType.dialog:
-            Player.Instance.dialog = action.value;
-            break;
-        case ReignsTypeCard.Action.ActionType.food:
-            Player.Instance.food = Mathf.Clamp(Player.Instance.food + action.value, 0, Balance.values.max_food);
-            break;
-        case ReignsTypeCard.Action.ActionType.fuel:
-            Player.Instance.fuel = Mathf.Clamp(Player.Instance.fuel + action.value, 0, Balance.values.max_fuel);
-            break;
-        case ReignsTypeCard.Action.ActionType.money:
-            Player.Instance.money = Mathf.Clamp(Player.Instance.money + action.value, 0, Balance.values.max_money);
-            break;
-        case ReignsTypeCard.Action.ActionType.distance:
-            Player.Instance.distance = Mathf.Clamp(Player.Instance.distance + action.value, 0, Balance.values.max_distance);
-            break;
-        default:
-            break;
+        if (action.GetType() == typeof(ReignsTypeCard.ResourceAction)) {
+            var resourceAction = action as ReignsTypeCard.ResourceAction;
+            Player.Instance.AddResource(resourceAction.resource, resourceAction.amount);
+        } else if (action.GetType() == typeof(ReignsTypeCard.DialogAction)) {
+            var dialogAction = action as ReignsTypeCard.DialogAction;
+            Player.Instance.dialog = dialogAction.id;
+        } else if (action.GetType() == typeof(ReignsTypeCard.TriggerAction)) {
+            var triggerAction = action as ReignsTypeCard.TriggerAction;
+            if (triggerAction.have)
+                Player.Instance.triggers.Add(triggerAction.trigger);
+            else
+                Player.Instance.triggers.Remove(triggerAction.trigger);
         }
     }
 }

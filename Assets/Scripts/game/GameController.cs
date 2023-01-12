@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using game;
 using UnityEngine;
 
@@ -51,12 +52,12 @@ public class GameController : MonoBehaviour
             switch (state)
             {
                 case GameState.Start:
-                    Player.Instance.money = Balance.values.start_money;
-                    Player.Instance.fuel = Balance.values.start_fuel;
-                    Player.Instance.food = Balance.values.start_food;
-                    Player.Instance.distance = Balance.values.start_distance;
-                    EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
+                    Player.Instance.SetResource(Resource.money, Balance.values.start_money);
+                    Player.Instance.SetResource(Resource.fuel, Balance.values.start_fuel);
+                    Player.Instance.SetResource(Resource.food, Balance.values.start_food);
+                    Player.Instance.SetResource(Resource.distance, Balance.values.start_distance);
 
+                    EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
                     state = GameState.SituationStart;
                     break;
                 case GameState.SituationStart:
@@ -117,13 +118,12 @@ public class GameController : MonoBehaviour
 
     private static bool LooseCheck()
     {
-        return Player.Instance.food <= 0 ||
-               Player.Instance.fuel <= 0 ||
-               Player.Instance.money <= 0;
+        var requiredResources = new List<Resource>() {Resource.food, Resource.fuel, Resource.money};
+        return requiredResources.Any(r => Player.Instance.GetResource(r) <= 0);
     }
 
     private static bool WinCheck()
     {
-        return Player.Instance.distance >= Balance.values.max_distance;
+        return Player.Instance.GetResource(Resource.distance) >= Balance.values.max_distance;
     }
 }
