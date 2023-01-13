@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: dps
   m_EditorClassIdentifier: 
   id: card_dps
-  enabled: 1
+  enabled: 0
   conditions:
     priority: 0
     triggers:

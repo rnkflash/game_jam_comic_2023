@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f721dcf3943bb46bc5a4b67ed86c14, type: 3}
+  m_Name: poklonskaya
+  m_EditorClassIdentifier: 
+  id: card_poklonskaya
+  enabled: 0
+  conditions:
+    priority: 0
+    triggers: []
+    resources: []
+  dialogs:
+  - id: 0
+    character: 23
+    text: "\u041A\u0440\u044B\u043C \u043D\u0430\u0448?!"
+    choiceLeft:
+      text: "\u041D\u044F\u0448"
+      aftermath: 
+      actions:
+      - type: 0
+        data:
+          rid: 418072007160889486
+      - type: 0
+        data:
+          rid: 418072007160889487
+      - type: 0
+        data:
+          rid: 418072007160889488
+    choiceRight:
+      text: "\u041C\u044F\u0448"
+      aftermath: 
+      actions:
+      - type: 0
+        data:
+          rid: 418072007160889388
+      - type: 0
+        data:
+          rid: 418072007160889389
+      - type: 0
+        data:
+          rid: 2448774329981468675
+  references:
+    version: 2
+    RefIds:
+    - rid: 418072007160889388
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 0
+        amount: -33
+    - rid: 418072007160889389
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 3
+        amount: 700
+    - rid: 418072007160889486
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 0
+        amount: -33
+    - rid: 418072007160889487
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 1
+        amount: -33
+    - rid: 418072007160889488
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 3
+        amount: 700
+    - rid: 2448774329981468675
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 1
+        amount: -33

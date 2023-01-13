@@ -1,0 +1,228 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f721dcf3943bb46bc5a4b67ed86c14, type: 3}
+  m_Name: voencom
+  m_EditorClassIdentifier: 
+  id: card_voencom
+  enabled: 0
+  conditions:
+    priority: 0
+    triggers: []
+    resources: []
+  dialogs:
+  - id: 0
+    character: 7
+    text: "\u0417\u0434\u0440\u0430\u0432\u0435 \u0436\u0435\u043B\u0430\u044E, \u0446\u0435\u043B\u044C
+      \u043F\u043E\u0435\u0437\u0434\u043A\u0438 \u0432 \u0413\u0440\u0443\u0437\u0438\u044E? "
+    choiceLeft:
+      text: "\u042D\u044D\u044D"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 418072007160889467
+    choiceRight:
+      text: "\u0422\u0443\u0440\u0438\u0437\u043C"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 418072007160889469
+  - id: 1
+    character: 7
+    text: "\u0421\u043A\u043E\u043B\u044C\u043A\u043E \u043B\u0435\u0442?"
+    choiceLeft:
+      text: "\u0421\u043A\u0430\u0437\u0430\u0442\u044C"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 418072007160889471
+    choiceRight:
+      text: "\u0421\u043A\u0430\u0437\u0430\u0442\u044C"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 418072007160889473
+  - id: 2
+    character: 7
+    text: "\u0421\u043B\u0443\u0436\u0438\u043B\u0438?"
+    choiceLeft:
+      text: "\u041D\u0435\u0442"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 418072007160889475
+    choiceRight:
+      text: "\u041D\u0435\u0442"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 418072007160889477
+  - id: 3
+    character: 7
+    text: "\u0412\u043E\u0435\u043D\u043D\u044B\u0439 \u0431\u0438\u043B\u0435\u0442?"
+    choiceLeft:
+      text: "\u041D\u0435\u0442\u0443"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 418072007160889479
+    choiceRight:
+      text: "\u0417\u0430\u0431\u044B\u043B"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 418072007160889481
+  - id: 4
+    character: 7
+    text: "\u0410 \u0435\u0441\u043B\u0438 \u043D\u0430\u0439\u0434\u0443?"
+    choiceLeft:
+      text: "\u041D\u0435\u0442\u0443, \u0447\u0435\u0441\u0442\u043D\u043E"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 418072007160889483
+    choiceRight:
+      text: "\u041D\u0443\u0443, \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430
+        :( "
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 418072007160889485
+  - id: 5
+    character: 7
+    text: "\u0428\u0443\u0442\u043A\u0430. \u041F\u0440\u043E\u0435\u0437\u0436\u0430\u0439\u0442\u0435."
+    choiceLeft:
+      text: "\u0424\u0443\u0445"
+      aftermath: "\u0412\u044B \u043E\u0431\u043B\u0435\u0433\u0447\u0435\u043D\u043D\u043E
+        \u0432\u044B\u0434\u044B\u0445\u0430\u0439\u0442\u0435"
+      actions:
+      - type: 0
+        data:
+          rid: 418072007160889459
+      - type: 0
+        data:
+          rid: 418072007160889460
+      - type: 0
+        data:
+          rid: 418072007160889461
+    choiceRight:
+      text: "\u0425\u044D\u0445"
+      aftermath: "\u0412\u044B \u043E\u0431\u043B\u0435\u0433\u0447\u0435\u043D\u043D\u043E
+        \u0432\u044B\u0434\u044B\u0445\u0430\u0439\u0442\u0435"
+      actions:
+      - type: 0
+        data:
+          rid: 418072007160889463
+      - type: 0
+        data:
+          rid: 418072007160889464
+      - type: 0
+        data:
+          rid: 418072007160889465
+  references:
+    version: 2
+    RefIds:
+    - rid: 418072007160889459
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 0
+        amount: -33
+    - rid: 418072007160889460
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 1
+        amount: -33
+    - rid: 418072007160889461
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 3
+        amount: 700
+    - rid: 418072007160889463
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 0
+        amount: -33
+    - rid: 418072007160889464
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 1
+        amount: -33
+    - rid: 418072007160889465
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 3
+        amount: 700
+    - rid: 418072007160889467
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 1
+    - rid: 418072007160889469
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 1
+    - rid: 418072007160889471
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 2
+    - rid: 418072007160889473
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 2
+    - rid: 418072007160889475
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 3
+    - rid: 418072007160889477
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 3
+    - rid: 418072007160889479
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 4
+    - rid: 418072007160889481
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 4
+    - rid: 418072007160889483
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 5
+    - rid: 418072007160889485
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 5
