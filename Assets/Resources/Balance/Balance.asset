@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eaf4a8dbb9abbf4897314b560b265b8, type: 3}
   m_Name: Balance
   m_EditorClassIdentifier: 
-  start_fuel: 50
-  max_fuel: 100
-  start_food: 50
-  max_food: 100
-  start_money: 50
-  max_money: 100
+  start_fuel: 1000
+  max_fuel: 1000
+  start_food: 1000
+  max_food: 1000
+  start_money: 500
+  max_money: 1000
   start_distance: 0
   max_distance: 20000
