@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68e929edf1fc83e4ea65cbe8112c8c4b, type: 3}
-  m_Name: Character
+  m_Name: Bagrov
   m_EditorClassIdentifier: 
-  id: 0
-  image: {fileID: 21300000, guid: 2aaf4a92c96c90a4383974ee1dbc5bd3, type: 3}
+  id: 37
+  image: {fileID: 21300000, guid: f9c859ea1fafaa341a9a226f1502cd8d, type: 3}
