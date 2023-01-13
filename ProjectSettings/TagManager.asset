@@ -56,6 +56,9 @@ TagManager:
   - name: Lesa
     uniqueID: 2569360375
     locked: 0
+  - name: road
+    uniqueID: 4279660059
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
