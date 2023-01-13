@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: mom_and_kid
   m_EditorClassIdentifier: 
   id: card_mom_and_kid
-  enabled: 0
+  enabled: 1
   conditions:
     priority: 0
     triggers: []

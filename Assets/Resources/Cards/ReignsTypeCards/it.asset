@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: it
   m_EditorClassIdentifier: 
   id: card_it
-  enabled: 0
+  enabled: 1
   conditions:
     priority: 0
     triggers: []

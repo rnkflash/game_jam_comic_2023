@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: maloy_card
   m_EditorClassIdentifier: 
   id: maloy_card
-  enabled: 0
+  enabled: 1
   conditions:
     priority: 0
     triggers: []

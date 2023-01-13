@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: liberal_journalist_card
   m_EditorClassIdentifier: 
   id: liberal_journalist_card
-  enabled: 0
+  enabled: 1
   conditions:
     priority: 0
     triggers: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Idrak_card
   m_EditorClassIdentifier: 
   id: Idrak_card
-  enabled: 0
+  enabled: 1
   conditions:
     priority: 0
     triggers: []

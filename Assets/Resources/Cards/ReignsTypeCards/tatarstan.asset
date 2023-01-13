@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: tatarstan
   m_EditorClassIdentifier: 
   id: card_tatarstan
-  enabled: 0
+  enabled: 1
   conditions:
     priority: 0
     triggers: []

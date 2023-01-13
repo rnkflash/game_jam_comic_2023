@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: pranker_1
   m_EditorClassIdentifier: 
   id: card_pranker_1
-  enabled: 0
+  enabled: 1
   conditions:
     priority: 0
     triggers: []

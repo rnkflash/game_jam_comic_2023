@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: kvashonkin_card
   m_EditorClassIdentifier: 
   id: kvashonkin_card
-  enabled: 0
+  enabled: 1
   conditions:
     priority: 0
     triggers: []

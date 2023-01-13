@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: voencom
   m_EditorClassIdentifier: 
   id: card_voencom
-  enabled: 0
+  enabled: 1
   conditions:
     priority: 0
     triggers: []

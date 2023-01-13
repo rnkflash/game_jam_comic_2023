@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: card_tutorual
   m_EditorClassIdentifier: 
   id: card_tutorail
-  enabled: 0
+  enabled: 1
   conditions:
     priority: 0
     triggers: []

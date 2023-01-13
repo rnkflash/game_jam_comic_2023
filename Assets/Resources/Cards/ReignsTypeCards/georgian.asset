@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: georgian
   m_EditorClassIdentifier: 
   id: card_georgian
-  enabled: 0
+  enabled: 1
   conditions:
     priority: 0
     triggers: []
