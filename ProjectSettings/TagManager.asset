@@ -38,6 +38,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sky
+    uniqueID: 176563109
+    locked: 0
+  - name: Gori
+    uniqueID: 3349621969
+    locked: 0
+  - name: shadow forest lighter
+    uniqueID: 1025794127
+    locked: 0
+  - name: shadow forest
+    uniqueID: 1237701025
+    locked: 0
+  - name: Lesa2
+    uniqueID: 18062459
+    locked: 0
+  - name: Lesa
+    uniqueID: 2569360375
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 2511546805
     locked: 0
