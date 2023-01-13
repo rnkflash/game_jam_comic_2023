@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68e929edf1fc83e4ea65cbe8112c8c4b, type: 3}
-  m_Name: Character 1
+  m_Name: February
   m_EditorClassIdentifier: 
-  id: 1
-  image: {fileID: 21300000, guid: 666a4e1e749d7cc469160f57079b7191, type: 3}
+  id: 29
+  image: {fileID: 21300000, guid: 9f7af3673bfce7d47b7a20285c0d88a2, type: 3}
