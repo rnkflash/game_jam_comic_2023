@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e929edf1fc83e4ea65cbe8112c8c4b, type: 3}
   m_Name: Trucker
   m_EditorClassIdentifier: 
-  id: 37
-  image: {fileID: 21300000, guid: f9c859ea1fafaa341a9a226f1502cd8d, type: 3}
+  id: 22
+  image: {fileID: 21300000, guid: 396b7e2a715f12d41bda047c29105060, type: 3}
