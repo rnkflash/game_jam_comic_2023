@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: kaz
   m_EditorClassIdentifier: 
   id: kaz
-  enabled: 1
+  enabled: 0
   conditions:
     priority: 0
-    triggers: []
+    triggers:
+    - trigger: 0
+      have: 0
+    - trigger: 0
+      have: 0
     resources:
     - resource: 3
       min: 1000
