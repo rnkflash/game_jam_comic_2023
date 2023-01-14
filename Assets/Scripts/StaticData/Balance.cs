@@ -15,5 +15,13 @@ namespace StaticData {
         public int start_distance;
         public int max_distance;
 
+        public List<ResourceEachCard> each_card_resources;
+
+        [Serializable]
+        public class ResourceEachCard{
+            public Resource type;
+            public int amount = 0;
+        }
+
     }
 }
