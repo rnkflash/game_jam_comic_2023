@@ -41,7 +41,7 @@ public class ResourceBar : MonoBehaviour
         moneyBar.SetValue(Player.Instance.GetResource(Resource.money));
         
         var distanceLeft = Mathf.Clamp(Balance.values.max_distance - Player.Instance.GetResource(Resource.distance), 0, Balance.values.max_distance);
-        distanceBar.text = "Осталось проехать: "+$"{distanceLeft}";
+        distanceBar.text = $"{distanceLeft} км";
 
         debugTriggers.text = "";
         Player.Instance.triggers.ForEach(trigger=>debugTriggers.text += Enum.GetName(typeof(Trigger), trigger));
