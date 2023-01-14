@@ -1063,7 +1063,6 @@ GameObject:
   m_Component:
   - component: {fileID: 214845342}
   - component: {fileID: 214845341}
-  - component: {fileID: 214845340}
   m_Layer: 0
   m_Name: car_Player
   m_TagString: Untagged
@@ -1071,19 +1070,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &214845340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214845339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68c35e3ee7bf09448f64cacd2bb5116, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movement: {x: 0.1, y: 0, z: 0}
 --- !u!212 &214845341
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1144,12 +1130,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214845339}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.41, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1454924888}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &215691783
 GameObject:
@@ -1166,7 +1152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &215691784
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2205,6 +2191,7 @@ GameObject:
   - component: {fileID: 577941898}
   - component: {fileID: 577941897}
   - component: {fileID: 577941896}
+  - component: {fileID: 577941905}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -2239,6 +2226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1facc0cf2720d2743aa3662d2fb6f926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsUI: {fileID: 215691783}
 --- !u!114 &577941898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2342,6 +2330,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &577941905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577941895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9698a25ab133d469ff04db212c2769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carObject: {fileID: 1454924887}
 --- !u!1 &595264599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3995,10 +3996,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1143624650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68c35e3ee7bf09448f64cacd2bb5116, type: 3}
+  m_Script: {fileID: 11500000, guid: f24ccefc631721e4cbb722ad9f627220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {x: 0.1, y: 0, z: 0}
+  followTarget: {fileID: 1454924888}
+  maxSpeed: 500
+  maxDistance: 1000
 --- !u!1001 &1188992722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4873,6 +4876,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427067525}
   m_CullTransparentMesh: 1
+--- !u!1 &1454924887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1454924888}
+  - component: {fileID: 1454924889}
+  m_Layer: 0
+  m_Name: Car
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1454924888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454924887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -3.41, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 214845342}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1454924889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454924887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3363d476d24857f4781994c93aa6c13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
 --- !u!1 &1464516798
 GameObject:
   m_ObjectHideFlags: 0

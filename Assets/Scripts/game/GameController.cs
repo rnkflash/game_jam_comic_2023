@@ -7,6 +7,7 @@ using UnityEngine;
 public enum GameState
 {
     Start,
+    RandomRoadMove,
     SituationStart,
     Dialog,
     PlayerDecision,
@@ -28,6 +29,9 @@ public class GameController : MonoBehaviour
     private SituationConclusionController situationConclusionController;
     private WinController winController;
     private LoseController loseController;
+    private RoadMoveController roadMoveController;
+
+    public GameObject cardsUI;
 
     void Awake() {
         situationStartController = GetComponent<SituationStartController>();
@@ -37,6 +41,7 @@ public class GameController : MonoBehaviour
         winController = GetComponent<WinController>();
         loseController = GetComponent<LoseController>();
         afterMathController = GetComponent<AftermathController>();
+        roadMoveController = GetComponent<RoadMoveController>();
 
         state = GameState.Start;
     }
@@ -58,6 +63,12 @@ public class GameController : MonoBehaviour
                     Player.Instance.SetResource(Resource.distance, Balance.values.start_distance);
 
                     EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
+                    state = GameState.RandomRoadMove;
+                    break;
+                case GameState.RandomRoadMove:
+                    cardsUI.SetActive(false);
+                    yield return roadMoveController.Move();
+                    cardsUI.SetActive(true);
                     state = GameState.SituationStart;
                     break;
                 case GameState.SituationStart:
@@ -98,7 +109,7 @@ public class GameController : MonoBehaviour
                     else if (Player.Instance.card == null)
                         state = GameState.Lose;
                     else
-                        state = GameState.SituationStart;
+                        state = GameState.RandomRoadMove;
                     
                     break;
                 case GameState.Win:
