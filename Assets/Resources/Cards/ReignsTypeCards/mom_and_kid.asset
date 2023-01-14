@@ -50,16 +50,7 @@ MonoBehaviour:
       text: "\u041D\u0435\u0442 "
       aftermath: "\u0421\u0435\u043C\u044C\u044F \u0438\u0434\u0435\u0442 \u043A
         \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439 \u043C\u0430\u0448\u0438\u043D\u0435"
-      actions:
-      - type: 0
-        data:
-          rid: 2448774329981468731
-      - type: 0
-        data:
-          rid: 2448774329981468732
-      - type: 0
-        data:
-          rid: 2448774329981468733
+      actions: []
     choiceRight:
       text: "\u0423 \u043C\u0435\u043D\u044F \u043C\u0430\u043B\u043E \u043C\u0435\u0441\u0442\u0430"
       aftermath: 
@@ -75,16 +66,7 @@ MonoBehaviour:
       text: "\u041D\u0435\u0442"
       aftermath: "\u0421\u0435\u043C\u044C\u044F \u0438\u0434\u0435\u0442 \u043A
         \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439 \u043C\u0430\u0448\u0438\u043D\u0435"
-      actions:
-      - type: 0
-        data:
-          rid: 2448774329981468731
-      - type: 0
-        data:
-          rid: 2448774329981468732
-      - type: 0
-        data:
-          rid: 2448774329981468733
+      actions: []
     choiceRight:
       text: "\u0425\u043E\u0440\u043E\u0448\u043E "
       aftermath: 
@@ -92,12 +74,6 @@ MonoBehaviour:
       - type: 1
         data:
           rid: 2448774329981468730
-      - type: 0
-        data:
-          rid: 2448774329981468735
-      - type: 0
-        data:
-          rid: 2448774329981468736
   - id: 3
     character: 21
     text: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0431\u043E\u043B\u044C\u0448\u043E\u0435!
@@ -110,13 +86,10 @@ MonoBehaviour:
       actions:
       - type: 0
         data:
-          rid: 2448774329981468731
+          rid: 418072007160889495
       - type: 0
         data:
-          rid: 2448774329981468732
-      - type: 0
-        data:
-          rid: 2448774329981468733
+          rid: 418072007160889496
     choiceRight:
       text: "\u0410 \u043A\u0430\u043A \u0436\u0435 \u0432\u044B? "
       aftermath: "\u041C\u044B \u043A\u0430\u043A-\u043D\u0438\u0431\u0443\u0434\u044C
@@ -124,16 +97,37 @@ MonoBehaviour:
       actions:
       - type: 0
         data:
-          rid: 2448774329981468738
+          rid: 418072007160889491
       - type: 0
         data:
-          rid: 2448774329981468735
-      - type: 0
-        data:
-          rid: 2448774329981468736
+          rid: 418072007160889492
   references:
     version: 2
     RefIds:
+    - rid: 418072007160889491
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 0
+        amount: -100
+    - rid: 418072007160889492
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 2
+        amount: 100
+    - rid: 418072007160889495
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 0
+        amount: -100
+    - rid: 418072007160889496
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 2
+        amount: 100
     - rid: 2448774329981468728
       type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
       data:
@@ -144,42 +138,6 @@ MonoBehaviour:
       data:
         type: 1
         id: 3
-    - rid: 2448774329981468731
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 0
-        amount: -33
-    - rid: 2448774329981468732
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 1
-        amount: -33
-    - rid: 2448774329981468733
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 3
-        amount: 700
-    - rid: 2448774329981468735
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 1
-        amount: -33
-    - rid: 2448774329981468736
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 3
-        amount: 700
-    - rid: 2448774329981468738
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 0
-        amount: -33
     - rid: 2448774329981468740
       type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
       data:

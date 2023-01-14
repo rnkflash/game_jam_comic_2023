@@ -26,66 +26,12 @@ MonoBehaviour:
       text: "\u0427\u0451?"
       aftermath: "\u0425\u0443\u0439 \u0447\u0435\u0440\u0435\u0437 \u043F\u043B\u0435\u0447\u043E!
         )))"
-      actions:
-      - type: 0
-        data:
-          rid: 2448774329981468672
-      - type: 0
-        data:
-          rid: 2448774329981468673
-      - type: 0
-        data:
-          rid: 2448774329981468674
+      actions: []
     choiceRight:
       text: "\u0427\u0451?"
       aftermath: "\u0425\u0443\u0439 \u0447\u0435\u0440\u0435\u0437 \u043F\u043B\u0435\u0447\u043E!
         )))"
-      actions:
-      - type: 0
-        data:
-          rid: 418072007160889388
-      - type: 0
-        data:
-          rid: 418072007160889389
-      - type: 0
-        data:
-          rid: 2448774329981468675
+      actions: []
   references:
     version: 2
-    RefIds:
-    - rid: 418072007160889388
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 0
-        amount: -33
-    - rid: 418072007160889389
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 3
-        amount: 700
-    - rid: 2448774329981468672
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 0
-        amount: -33
-    - rid: 2448774329981468673
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 1
-        amount: -33
-    - rid: 2448774329981468674
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 3
-        amount: 700
-    - rid: 2448774329981468675
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 1
-        amount: -33
+    RefIds: []
