@@ -39,9 +39,18 @@ MonoBehaviour:
       - type: 0
         data:
           rid: 2448774329981468676
+      - type: 0
+        data:
+          rid: 418072033446854656
   references:
     version: 2
     RefIds:
+    - rid: 418072033446854656
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 1
+        amount: 200
     - rid: 2448774329981468676
       type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
       data:
