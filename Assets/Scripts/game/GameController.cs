@@ -96,14 +96,8 @@ public class GameController : MonoBehaviour
 
                     if (Player.Instance.dialog != -1)
                         state = GameState.Dialog;
-                    else {
-                        Balance.values.each_card_resources.ForEach(r=>{
-                            Player.Instance.AddResource(r.type, r.amount);
-                        });
-                        EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
-                        
+                    else
                         state = GameState.WinCheck;
-                    }
 
                     break;
                 case GameState.WinCheck:

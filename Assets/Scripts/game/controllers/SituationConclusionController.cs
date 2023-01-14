@@ -21,6 +21,11 @@ public class SituationConclusionController : MonoBehaviour {
         Player.Instance.dialog = -1;
         choice.actions.ForEach(action => DoAction(action.data));
 
+        if (Player.Instance.dialog == -1)
+            Balance.values.each_card_resources.ForEach(r => {
+                Player.Instance.AddResource(r.type, r.amount);
+            });
+
         EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
 
         yield return new WaitForSeconds(1.0f);
