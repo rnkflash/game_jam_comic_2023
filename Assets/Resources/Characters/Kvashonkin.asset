@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Kvashonkin
   m_EditorClassIdentifier: 
   id: 1
-  image: {fileID: 21300000, guid: 666a4e1e749d7cc469160f57079b7191, type: 3}
+  image: {fileID: 21300000, guid: a75cd889e80e1f84495bce910ba1ca54, type: 3}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Maloy
   m_EditorClassIdentifier: 
   id: 2
-  image: {fileID: 21300000, guid: ced4f0f5a1afe85409dbe5a78738319a, type: 3}
+  image: {fileID: 21300000, guid: 985b3f5933d40414bb7f3b035ad64bba, type: 3}

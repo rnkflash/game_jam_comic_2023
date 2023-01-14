@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Brodway
   m_EditorClassIdentifier: 
   id: 3
-  image: {fileID: 21300000, guid: 142c568a70bd9374697ddaa7aba3851b, type: 3}
+  image: {fileID: 21300000, guid: 5b367415c4ba1a14aa931d4b44f59d8a, type: 3}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Andreev
   m_EditorClassIdentifier: 
   id: 5
-  image: {fileID: 21300000, guid: 49e61fb084e4d074e91c9e53d359dc6b, type: 3}
+  image: {fileID: 21300000, guid: 57f31babbdcf5724b957938e00ac283c, type: 3}

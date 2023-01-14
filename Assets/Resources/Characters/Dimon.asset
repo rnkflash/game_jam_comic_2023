@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68e929edf1fc83e4ea65cbe8112c8c4b, type: 3}
-  m_Name: Idrak
+  m_Name: Dimon
   m_EditorClassIdentifier: 
-  id: 0
-  image: {fileID: 21300000, guid: 28d35f830417c2a40be36d529a206941, type: 3}
+  id: 43
+  image: {fileID: 21300000, guid: 9b5b3af186ab3794ca6c1b2c3e43cdb3, type: 3}

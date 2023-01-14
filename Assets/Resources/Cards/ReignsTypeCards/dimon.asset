@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f721dcf3943bb46bc5a4b67ed86c14, type: 3}
+  m_Name: dimon
+  m_EditorClassIdentifier: 
+  id: card_dimon
+  enabled: 1
+  conditions:
+    priority: 0
+    triggers: []
+    resources: []
+  dialogs:
+  - id: 0
+    character: 43
+    text: "\u041F\u0440\u0438\u043B\u0438\u043F\u0430\u043B\u044B \u0438 \u043F\u0440\u0438\u0445\u043B\u0435\u0431\u0430\u0442\u0435\u043B\u0438!!!"
+    choiceLeft:
+      text: "\u0427\u0442\u043E?"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487897
+    choiceRight:
+      text: ...
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487899
+  - id: 1
+    character: 43
+    text: "\u0411\u0435\u0441\u0441\u043B\u043E\u0432\u0435\u0441\u043D\u044B\u0435
+      \u043C\u0430\u043D\u043A\u0443\u0440\u0442\u044B!!!"
+    choiceLeft:
+      text: ...
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487901
+    choiceRight:
+      text: "\u041C\u0430\u043D\u043A\u0443\u0440\u0442\u044B? "
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487903
+  - id: 2
+    character: 43
+    text: "\u0421\u0442\u0430\u044F \u0441\u043E\u0431\u0430\u043A!!!"
+    choiceLeft:
+      text: "\u041A\u0430\u043A\u0438\u0445 \u0441\u043E\u0431\u0430\u043A?"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487905
+    choiceRight:
+      text: "\u0421\u0442\u0430\u044F?"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487907
+  - id: 3
+    character: 43
+    text: "\u0413\u043B\u0443\u043C\u043B\u0438\u0432\u044B\u0435 \u043F\u0440\u0438\u0441\u043B\u0443\u0436\u043D\u0438\u043A\u0438!!!"
+    choiceLeft:
+      text: "\u041F\u0440\u0438\u0441\u043B\u0443\u0436\u043D\u0438\u043A\u0438 \u0441\u043E\u0431\u0430\u043A?"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487909
+    choiceRight:
+      text: "\u041F\u043E\u0447\u0435\u043C\u0443 \u0433\u043B\u0443\u043C\u043B\u0438\u0432\u044B\u0435?"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487911
+  - id: 4
+    character: 43
+    text: "\u041D\u0430\u0446\u0438\u0441\u0442\u044B-\u043D\u0430\u0440\u043A\u043E\u043C\u0430\u043D\u044B!!!"
+    choiceLeft:
+      text: "\u042D\u0439, \u0442\u044B \u0447\u0435\u0433\u043E?"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487913
+    choiceRight:
+      text: "\u042D\u043C\u043C..."
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487915
+  - id: 5
+    character: 43
+    text: "\u0421\u0430\u0442\u0430\u043D\u0430! \u041B\u044E\u0446\u0438\u0444\u0435\u0440!
+      \u0418\u0431\u043B\u0438\u0441!"
+    choiceLeft:
+      text: "\u041A\u0442\u043E-\u043D\u0438\u0431\u0443\u0434\u044C, \u0442\u0443\u0442
+        \u043C\u0443\u0436\u0447\u0438\u043D\u0435 \u043D\u0443\u0436\u043D\u0430
+        \u043F\u043E\u043C\u043E\u0449\u044C"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487917
+    choiceRight:
+      text: "\u0418\u0411\u041B\u0418\u0421!!!"
+      aftermath: 
+      actions:
+      - type: 1
+        data:
+          rid: 2448774350769487919
+  - id: 6
+    character: 43
+    text: "\u0421 \u043F\u0440\u0430\u0437\u0434\u043D\u0438\u043A\u043E\u043C!"
+    choiceLeft:
+      text: "\u0427\u0422\u041E?!"
+      aftermath: 
+      actions: []
+    choiceRight:
+      text: "\u0421 \u043F\u0440\u0430\u0437\u0434\u043D\u0438\u043A\u043E\u043C?"
+      aftermath: 
+      actions: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2448774350769487897
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 1
+    - rid: 2448774350769487899
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 1
+    - rid: 2448774350769487901
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 2
+    - rid: 2448774350769487903
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 2
+    - rid: 2448774350769487905
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 3
+    - rid: 2448774350769487907
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 3
+    - rid: 2448774350769487909
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 4
+    - rid: 2448774350769487911
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 4
+    - rid: 2448774350769487913
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 5
+    - rid: 2448774350769487915
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 5
+    - rid: 2448774350769487917
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 6
+    - rid: 2448774350769487919
+      type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 1
+        id: 6
