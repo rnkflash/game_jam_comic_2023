@@ -21,6 +21,6 @@ public class Car : MonoBehaviour
         state = State.Moving;
         transform.DOMove(
             new Vector3(transform.position.x + distance, transform.position.y, transform.position.z), 2
-        ).SetEase(Ease.InOutCubic).OnComplete(()=>{state = State.Stop;});
+         ).SetEase(Ease.InOutCubic).OnComplete(()=>{state = State.Stop;});
     }
 }

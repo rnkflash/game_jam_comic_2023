@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e929edf1fc83e4ea65cbe8112c8c4b, type: 3}
   m_Name: Maloy
   m_EditorClassIdentifier: 
-  id: 3
-  image: {fileID: 21300000, guid: 142c568a70bd9374697ddaa7aba3851b, type: 3}
+  id: 2
+  image: {fileID: 21300000, guid: ced4f0f5a1afe85409dbe5a78738319a, type: 3}
