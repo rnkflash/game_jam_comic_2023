@@ -103,29 +103,11 @@ MonoBehaviour:
     choiceLeft:
       text: "\u041D\u0443\u0443 \u043D\u0435 \u0437\u043D\u0430\u044E"
       aftermath: 
-      actions:
-      - type: 0
-        data:
-          rid: 418072007160889449
-      - type: 0
-        data:
-          rid: 418072007160889450
-      - type: 0
-        data:
-          rid: 418072007160889451
+      actions: []
     choiceRight:
       text: "\u041C\u043E\u0436\u043D\u043E, \u043D\u0430\u0432\u0435\u0440\u043D\u043E"
       aftermath: 
-      actions:
-      - type: 0
-        data:
-          rid: 418072007160889452
-      - type: 0
-        data:
-          rid: 418072007160889453
-      - type: 0
-        data:
-          rid: 418072007160889454
+      actions: []
   references:
     version: 2
     RefIds:
@@ -159,39 +141,3 @@ MonoBehaviour:
       data:
         type: 1
         id: 2
-    - rid: 418072007160889449
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 0
-        amount: -33
-    - rid: 418072007160889450
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 1
-        amount: -33
-    - rid: 418072007160889451
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 3
-        amount: 700
-    - rid: 418072007160889452
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 0
-        amount: -33
-    - rid: 418072007160889453
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 1
-        amount: -33
-    - rid: 418072007160889454
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 3
-        amount: 700

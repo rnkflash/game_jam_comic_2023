@@ -16,12 +16,14 @@ MonoBehaviour:
   max_fuel: 1000
   start_food: 1000
   max_food: 1000
-  start_money: 500
-  max_money: 1000
+  start_money: 1000
+  max_money: 2000
   start_distance: 0
   max_distance: 20000
   each_card_resources:
   - type: 1
-    amount: -10
+    amount: -100
   - type: 0
-    amount: -10
+    amount: -100
+  - type: 3
+    amount: 700
