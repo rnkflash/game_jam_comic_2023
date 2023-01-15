@@ -19,8 +19,8 @@ MonoBehaviour:
     triggers: []
     resources:
     - resource: 0
-      min: 0
-      max: 100
+      min: 1
+      max: 200
   dialogs:
   - id: 0
     character: 12
@@ -69,13 +69,13 @@ MonoBehaviour:
       data:
         type: 0
         resource: 0
-        amount: 100
+        amount: 300
     - rid: 2448774329981468672
       type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
       data:
         type: 0
         resource: 0
-        amount: 100
+        amount: 300
     - rid: 2448774329981468689
       type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
       data:

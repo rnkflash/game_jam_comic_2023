@@ -55,7 +55,10 @@ MonoBehaviour:
       aftermath: "\u0423 \u0432\u0430\u0441 \u0442\u0435\u043F\u0435\u0440\u044C
         \u0435\u0441\u0442\u044C \u043F\u043E\u0447\u0442\u0438 \u043D\u043E\u0432\u044B\u0439
         \u043C\u0430\u0442\u0440\u0430\u0441 "
-      actions: []
+      actions:
+      - type: 0
+        data:
+          rid: 418072033446854669
   references:
     version: 2
     RefIds:
@@ -65,6 +68,12 @@ MonoBehaviour:
         type: 1
         id: 1
     - rid: 418072007160889388
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 2
+        amount: -100
+    - rid: 418072033446854669
       type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
       data:
         type: 0

@@ -40,15 +40,6 @@ MonoBehaviour:
       - type: 0
         data:
           rid: 418072007160889346
-      - type: 0
-        data:
-          rid: 418072007160889420
-      - type: 0
-        data:
-          rid: 418072007160889421
-      - type: 0
-        data:
-          rid: 418072007160889422
   - id: 1
     character: 1
     text: "\u0422\u0435\u0431\u0435 \u0447\u0442\u043E \u0441\u043E\u0432\u0441\u0435\u043C
@@ -126,21 +117,3 @@ MonoBehaviour:
         type: 0
         resource: 0
         amount: -100
-    - rid: 418072007160889420
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 1
-        amount: -33
-    - rid: 418072007160889421
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 0
-        amount: -33
-    - rid: 418072007160889422
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 3
-        amount: 700
