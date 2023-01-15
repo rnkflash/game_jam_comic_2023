@@ -15,7 +15,7 @@ MonoBehaviour:
   id: card_dps
   enabled: 1
   conditions:
-    priority: 0
+    priority: 8
     triggers:
     - trigger: 1
       have: 1
