@@ -80,17 +80,11 @@ MonoBehaviour:
     choiceLeft:
       text: "\u0423\u0440\u0430!"
       aftermath: 
-      actions:
-      - type: 0
-        data:
-          rid: 2448774329981468767
+      actions: []
     choiceRight:
       text: "\u0423\u0440\u0430!"
       aftermath: 
-      actions:
-      - type: 0
-        data:
-          rid: 2448774329981468768
+      actions: []
   - id: 4
     character: 16
     text: "\u041E\u0442\u0432\u0435\u0442 \u043D\u0435\u0432\u0435\u0440\u043D\u044B\u0439"
@@ -141,18 +135,6 @@ MonoBehaviour:
       data:
         type: 1
         id: 3
-    - rid: 2448774329981468767
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 3
-        amount: 20000
-    - rid: 2448774329981468768
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 3
-        amount: 20000
     - rid: 2448774329981468769
       type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
       data:
