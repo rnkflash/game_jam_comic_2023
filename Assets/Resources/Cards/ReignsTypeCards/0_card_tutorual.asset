@@ -25,20 +25,11 @@ MonoBehaviour:
     choiceLeft:
       text: "\u041D\u0435\u0442"
       aftermath: "\u041F\u0438\u0434\u043E\u0440\u0430 \u043E\u0442\u0432\u0435\u0442"
-      actions:
-      - type: 0
-        data:
-          rid: 418072033446854691
+      actions: []
     choiceRight:
       text: "\u0414\u0430"
       aftermath: "\u041F\u043E\u0435\u0445\u0430\u043B\u0438!"
       actions: []
   references:
     version: 2
-    RefIds:
-    - rid: 418072033446854691
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 1
-        amount: -4000
+    RefIds: []
