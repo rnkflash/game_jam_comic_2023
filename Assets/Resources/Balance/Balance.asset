@@ -24,6 +24,6 @@ MonoBehaviour:
   - type: 1
     amount: -70
   - type: 0
-    amount: -100
+    amount: -70
   - type: 3
     amount: 833
