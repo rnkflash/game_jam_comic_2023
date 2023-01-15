@@ -8,7 +8,7 @@ namespace game.objects
   {
     private void Start()
     {
-      transform.DOMoveX(100, 200).OnComplete(()=>Destroy(gameObject));
+      transform.DOMoveX(300, 600).OnComplete(()=>Destroy(gameObject));
       
     }
 
