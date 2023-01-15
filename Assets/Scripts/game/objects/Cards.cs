@@ -3,22 +3,63 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using System;
 
 public class Cards : MonoBehaviour
 {
+    public enum State {
+        empty,
+        hidden,
+        revealed,
+    }
+
     public GameObject cardBackPrefab;
     public GameObject cardBack;
     public GameObject cardFront;
 
     private bool noCards = true;
 
+    public State state;
+
     void Start() {
+        state = State.empty;
         noCards = true;
         cardBack.SetActive(!noCards);
         cardFront.SetActive(false);
+
+        EventBus<MouseOverPlayerChoice>.Sub(OnChoiceOver);
+        EventBus<MouseExitPlayerChoice>.Sub(OnChoiceExit);
+    }
+
+
+    void OnDestroy() {
+        EventBus<MouseOverPlayerChoice>.Unsub(OnChoiceOver);
+        EventBus<MouseExitPlayerChoice>.Unsub(OnChoiceExit);
+    }
+
+    private void OnChoiceOver(MouseOverPlayerChoice message)
+    {
+        if (state != State.revealed)
+            return;
+
+        if (message.choice == Choice.Left)
+            LeanLeft();
+        else
+            LeanRight();
+    }
+    
+    private void OnChoiceExit(MouseExitPlayerChoice message)
+    {
+        if (state != State.revealed)
+            return;
+        
+        StopLeaning();
     }
 
     public void FlipFrontCard(Sprite faceImg, bool lastCard = false) {
+        if (state != State.hidden)
+            return;
+
         var flipTime = 0.25f;
 
         var img = cardFront.GetComponent<Image>();
@@ -34,7 +75,10 @@ public class Cards : MonoBehaviour
 
         pbj.transform.DOScaleX(0.0f, flipTime/2).SetEase(Ease.InCubic).OnComplete(()=>{
             Destroy(pbj);
-            cardFront.transform.DOScaleX(1.0f, flipTime/2).SetEase(Ease.OutCubic);
+            cardFront.transform.DOScaleX(1.0f, flipTime/2).SetEase(Ease.OutCubic).OnComplete(()=>{
+                state = State.revealed;
+            });
+            
         });
 
         SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("flip_card"));
@@ -66,24 +110,33 @@ public class Cards : MonoBehaviour
                     noCards = false;
                     cardBack.SetActive(true);
                 }
+
+                if (state == State.empty)
+                    state = State.hidden;
             });
         }
         
     }
 
     public void LeanRight() {
+        if (state != State.revealed)
+            return;
         cardFront.transform.DOKill();
         cardFront.transform.DORotate(new Vector3(0,0,-30), 0.25f);
         SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("lean_card"));
     }
 
     public void LeanLeft() {
+        if (state != State.revealed)
+            return;
         cardFront.transform.DOKill();
         cardFront.transform.DORotate(new Vector3(0,0,30), 0.25f);
         SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("lean_card"));
     }
 
     public void StopLeaning() {
+        if (state != State.revealed)
+            return;
         cardFront.transform.DOKill();
         cardFront.transform.DORotate(new Vector3(0,0,0), 0.25f);
         SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("lean_card"));
@@ -98,6 +151,9 @@ public class Cards : MonoBehaviour
     }
 
     private void FallDown(float angle, float x) {
+        if (state != State.revealed)
+            return;
+
         cardFront.transform.DOKill();
         var clone = Instantiate(cardFront, Vector3.zero, Quaternion.identity);
         clone.transform.SetParent(transform, false);
@@ -113,6 +169,10 @@ public class Cards : MonoBehaviour
         var image = clone.GetComponentInChildren<Image>();
         image.DOFade(0.0f, 0.26f).SetDelay(0.1f).OnComplete(()=>{
             Destroy(clone);
+            if (noCards)
+                state = State.empty;
+            else
+                state = State.hidden;
         });
 
         SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("fall_card"));
