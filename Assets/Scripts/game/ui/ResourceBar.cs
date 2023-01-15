@@ -29,19 +29,23 @@ public class ResourceBar : MonoBehaviour
         moneyBar.Init(0, Balance.values.max_money);
         
         EventBus<PlayerResourcesChanged>.Sub(OnPlayerResourcesChanged);
+        EventBus<CarMovedDistance>.Sub(OnCarMoved);
     }
 
     void OnDestroy() {
         EventBus<PlayerResourcesChanged>.Unsub(OnPlayerResourcesChanged);
+        EventBus<CarMovedDistance>.Unsub(OnCarMoved);
     }    
 
     private void OnPlayerResourcesChanged(PlayerResourcesChanged msg) {
         foodBar.SetValue(Player.Instance.GetResource(Resource.food));
         fuelBar.SetValue(Player.Instance.GetResource(Resource.fuel));
         moneyBar.SetValue(Player.Instance.GetResource(Resource.money));
-        
-        var distanceLeft = Mathf.Clamp(Balance.values.max_distance - Player.Instance.GetResource(Resource.distance), 0, Balance.values.max_distance);
-        distanceBar.text = $"{distanceLeft} км";
-
     }
+
+    private void OnCarMoved(CarMovedDistance message)
+    {
+        distanceBar.text = $"{(Balance.values.max_distance - message.distance * 100.0f).ToString("F0")} м";
+    }
+
 }

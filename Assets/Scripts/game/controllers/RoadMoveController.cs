@@ -17,8 +17,11 @@ public class RoadMoveController : MonoBehaviour
     public GameObject carObject;
     private Car car;
 
+    private float car_orig_x;
+
     void Start() {
         car = carObject.GetComponent<Car>();
+        car_orig_x = car.transform.position.x;
     }
 
     public IEnumerator Move()
@@ -32,16 +35,32 @@ public class RoadMoveController : MonoBehaviour
     }
 
     private void RandomMove() {
-        car.Move(Random.Range(1.0f,10.0f));
+
+        var distanceToMove = Player.Instance.GetResource(Resource.distance) - Player.Instance.movedDistance;
+        Player.Instance.movedDistance = Player.Instance.GetResource(Resource.distance);
+        car.Move(distanceToMove / 100.0f);
         state = State.Moving;
+        
     }
+
+    private float sendDistance = 0.0f;
 
     void Update() {
         if (state == State.Start)
             RandomMove();
 
+
+        if (state == State.Moving) {
+            sendDistance +=Time.deltaTime;
+            if (sendDistance>0.15f) {
+                EventBus<CarMovedDistance>.Pub(new CarMovedDistance() {distance = car.transform.position.x - car_orig_x});
+                sendDistance = 0.0f;
+            }
+        }
+
         if (state == State.Moving && car.state == Car.State.Stop) {
             state = State.Exit;
+            EventBus<CarMovedDistance>.Pub(new CarMovedDistance() {distance = car.transform.position.x - car_orig_x});
         }
     }
 }

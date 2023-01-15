@@ -14,6 +14,8 @@ public class Player: MonoBehaviour
     public List<string> usedCards;
     public Choice choice;
 
+    public float movedDistance = 0;
+
     public List<string> dealtCards = new List<string>();
 
     void Awake() {

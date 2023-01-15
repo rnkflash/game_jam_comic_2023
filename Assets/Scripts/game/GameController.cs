@@ -61,6 +61,7 @@ public class GameController : MonoBehaviour
                     Player.Instance.SetResource(Resource.distance, Balance.values.start_distance);
 
                     EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
+                    EventBus<CarMovedDistance>.Pub(new CarMovedDistance());
                     state = GameState.RandomRoadMove;
                     break;
                 case GameState.RandomRoadMove:
