@@ -3,7 +3,6 @@ using System;
 [Serializable]
 public enum Character
 {
-    NO,
     Idrak,
     Kvashonkin,
     Maloy,
@@ -47,5 +46,6 @@ public enum Character
     Барыга,
     Паренькоторогонепустили,
     Чуваксгитарой,
-    Лжедмитрий
+    Лжедмитрий,
+    NO
 }
