@@ -34,15 +34,14 @@ MonoBehaviour:
           rid: 418072007160889569
     choiceRight:
       text: "\u0419\u043E\u0443, \u0441\u0430\u0434\u0438\u0441\u044C, \u0431\u0440\u043E!"
-      aftermath: "\u0421 \u043F\u0435\u0441\u043D\u0435\u0439 \u0434\u043E\u0440\u043E\u0433\u0430
-        \u043F\u0440\u043E\u0445\u043E\u0434\u0438\u0442 \u043B\u0435\u0433\u0447\u0435"
+      aftermath: "\u041E\u043D \u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F \u0441
+        \u0432\u0430\u043C\u0438 \u043F\u0438\u0440\u043E\u0436\u043A\u0430\u043C\u0438,
+        \u0430 \u0441 \u043F\u0435\u0441\u043D\u0435\u0439 \u0434\u043E\u0440\u043E\u0433\u0430
+        \u043F\u0440\u043E\u0445\u043E\u0434\u0438\u0442 \u043B\u0435\u0433\u0447\u0435 "
       actions:
       - type: 0
         data:
-          rid: 418072007160889565
-      - type: 0
-        data:
-          rid: 418072033446854668
+          rid: 418072033446854687
   - id: 1
     character: 42
     text: "\u041D\u043E\u0433\u0438 \u0443\u0441\u0442\u0430\u043B\u0438, \u0431\u0443\u0432\u0430\u043B\u044C\u043D\u043E
@@ -54,38 +53,31 @@ MonoBehaviour:
     choiceRight:
       text: "\u0425\u043E\u0440\u043E\u0448\u043E, \u043D\u043E \u0442\u043E\u043B\u044C\u043A\u043E
         \u043F\u0430\u0440\u0443 \u043A\u043C"
-      aftermath: "\u0421 \u043F\u0435\u0441\u043D\u0435\u0439 \u0434\u043E\u0440\u043E\u0433\u0430
-        \u043F\u0440\u043E\u0445\u043E\u0434\u0438\u0442 \u043B\u0435\u0433\u0447\u0435"
+      aftermath: "\u041E\u043D \u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F \u0441
+        \u0432\u0430\u043C\u0438 \u043F\u0438\u0440\u043E\u0436\u043A\u0430\u043C\u0438,
+        \u0430 \u0441 \u043F\u0435\u0441\u043D\u0435\u0439 \u0434\u043E\u0440\u043E\u0433\u0430
+        \u043F\u0440\u043E\u0445\u043E\u0434\u0438\u0442 \u043B\u0435\u0433\u0447\u0435 "
       actions:
       - type: 0
         data:
-          rid: 418072007160889570
-      - type: 0
-        data:
-          rid: 418072007160889565
+          rid: 418072033446854686
   references:
     version: 2
     RefIds:
-    - rid: 418072007160889565
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 3
-        amount: 700
     - rid: 418072007160889569
       type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
       data:
         type: 1
         id: 1
-    - rid: 418072007160889570
+    - rid: 418072033446854686
       type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
       data:
         type: 0
         resource: 0
-        amount: -100
-    - rid: 418072033446854668
+        amount: 200
+    - rid: 418072033446854687
       type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
       data:
         type: 0
         resource: 0
-        amount: -100
+        amount: 200

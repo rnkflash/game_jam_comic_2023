@@ -15,15 +15,15 @@ MonoBehaviour:
   id: card_eda
   enabled: 1
   conditions:
-    priority: 0
+    priority: 9
     triggers: []
     resources:
     - resource: 0
-      min: 100
+      min: 0
       max: 400
     - resource: 2
       min: 200
-      max: 0
+      max: 3000
   dialogs:
   - id: 0
     character: 39
