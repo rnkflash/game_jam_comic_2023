@@ -1769,7 +1769,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.1
+  m_fontSize: 11.4
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3663,6 +3663,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 817878018}
     m_Modifications:
+    - target: {fileID: 1237782057636767689, guid: 16c166aa490ca9b4f90f3b12df6c1e4c, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ce5d5d79388bea04ebf2fd214734b917, type: 3}
+    - target: {fileID: 1237782057636767689, guid: 16c166aa490ca9b4f90f3b12df6c1e4c, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cfc5e951b065a744ca524857ed81ed52, type: 3}
+    - target: {fileID: 1237782057636767691, guid: 16c166aa490ca9b4f90f3b12df6c1e4c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0dfa845a5d6e6d443aa8c1e7c6e1126a, type: 3}
+    - target: {fileID: 1237782057778007396, guid: 16c166aa490ca9b4f90f3b12df6c1e4c, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ce5d5d79388bea04ebf2fd214734b917, type: 3}
+    - target: {fileID: 1237782057778007396, guid: 16c166aa490ca9b4f90f3b12df6c1e4c, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cfc5e951b065a744ca524857ed81ed52, type: 3}
+    - target: {fileID: 1237782057778007398, guid: 16c166aa490ca9b4f90f3b12df6c1e4c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0dfa845a5d6e6d443aa8c1e7c6e1126a, type: 3}
     - target: {fileID: 1237782057912038812, guid: 16c166aa490ca9b4f90f3b12df6c1e4c, type: 3}
       propertyPath: m_Name
       value: DialogUI
@@ -5497,7 +5521,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.8
+  m_fontSize: 12.4
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
