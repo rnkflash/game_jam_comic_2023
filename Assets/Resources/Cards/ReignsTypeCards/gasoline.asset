@@ -15,7 +15,7 @@ MonoBehaviour:
   id: card_gasoline
   enabled: 1
   conditions:
-    priority: 0
+    priority: 9
     triggers: []
     resources:
     - resource: 1

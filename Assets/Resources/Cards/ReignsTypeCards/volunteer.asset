@@ -15,12 +15,12 @@ MonoBehaviour:
   id: card_volunteer
   enabled: 1
   conditions:
-    priority: 0
+    priority: 9
     triggers: []
     resources:
     - resource: 0
-      min: 100
-      max: 300
+      min: 0
+      max: 200
   dialogs:
   - id: 0
     character: 12
