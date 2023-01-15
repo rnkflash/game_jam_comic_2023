@@ -96,19 +96,10 @@ MonoBehaviour:
       actions:
       - type: 0
         data:
-          rid: 418072007160889491
-      - type: 0
-        data:
           rid: 418072007160889492
   references:
     version: 2
     RefIds:
-    - rid: 418072007160889491
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 0
-        amount: -100
     - rid: 418072007160889492
       type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
       data:

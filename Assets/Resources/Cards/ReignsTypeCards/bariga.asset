@@ -108,13 +108,13 @@ MonoBehaviour:
       data:
         type: 0
         resource: 0
-        amount: 200
+        amount: 300
     - rid: 418072007160889507
       type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
       data:
         type: 0
         resource: 1
-        amount: 200
+        amount: 300
     - rid: 418072007160889509
       type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
       data:
