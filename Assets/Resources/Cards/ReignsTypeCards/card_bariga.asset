@@ -39,7 +39,8 @@ MonoBehaviour:
         data:
           rid: 418072007160889509
     choiceRight:
-      text: "\u042F \u0431\u044B \u043A\u0443\u043F\u0438\u043B \u043A\u043E\u0439-\u0447\u0435\u0433\u043E"
+      text: "\u0427\u0442\u043E \u0442\u0430\u043C \u0443 \u0442\u0435\u0431\u044F
+        \u0435\u0441\u0442\u044C?"
       aftermath: 
       actions:
       - type: 1

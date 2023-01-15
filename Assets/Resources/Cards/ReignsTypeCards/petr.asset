@@ -25,14 +25,14 @@ MonoBehaviour:
       \u0437\u043E\u0432\u0443\u0442. \u042F \u0432\u043E\u0442 \u0441\u0432\u0430\u043B\u0438\u0432\u0430\u044E,
       \u0442\u044B \u0442\u043E\u0436\u0435?"
     choiceLeft:
-      text: "\u041F\u043E\u043A\u0430 \u043D\u0435 \u0437\u043D\u0430\u044E"
+      text: "\u0412\u0438\u0434\u0438\u043C\u043E \u0434\u0430 "
       aftermath: 
       actions:
       - type: 1
         data:
           rid: 2448774329981468677
     choiceRight:
-      text: "\u0414\u0430 "
+      text: "\u0410\u0433\u0430"
       aftermath: 
       actions:
       - type: 1
