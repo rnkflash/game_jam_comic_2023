@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: walking_cyclist2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: eb2f02b686124c541848fd68fdace07d, type: 3}
+    - {fileID: 2800000, guid: 06144d0b7ae509049b242358ecc59145, type: 3}
+    - {fileID: 2800000, guid: 26fc8d2a95a71c044932eae3878fec2e, type: 3}
+    - {fileID: 2800000, guid: a0041a2b3282c8e42acf10f5d85ee3c8, type: 3}
+    - {fileID: 2800000, guid: 234be00dc848e4845aee6533107de9ef, type: 3}
+    - {fileID: 2800000, guid: e166fbf9629d82d47a563ad900f6012c, type: 3}
+    - {fileID: 2800000, guid: 66b41f8dfa6c5de4ea72bf13f5a8c6d4, type: 3}
+    - {fileID: 2800000, guid: 0e1c806ec9cf9984f81009937504cc98, type: 3}
+    - {fileID: 2800000, guid: a979397125e2c5246a89fb84a166318f, type: 3}
+    - {fileID: 2800000, guid: e1bb845fee567514fa1edbab1f1ba8f9, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: a979397125e2c5246a89fb84a166318f, type: 3}
+  - {fileID: 21300000, guid: eb2f02b686124c541848fd68fdace07d, type: 3}
+  - {fileID: 21300000, guid: e166fbf9629d82d47a563ad900f6012c, type: 3}
+  - {fileID: 21300000, guid: 26fc8d2a95a71c044932eae3878fec2e, type: 3}
+  - {fileID: 21300000, guid: 06144d0b7ae509049b242358ecc59145, type: 3}
+  - {fileID: 21300000, guid: a0041a2b3282c8e42acf10f5d85ee3c8, type: 3}
+  - {fileID: 21300000, guid: 234be00dc848e4845aee6533107de9ef, type: 3}
+  - {fileID: 21300000, guid: 66b41f8dfa6c5de4ea72bf13f5a8c6d4, type: 3}
+  - {fileID: 21300000, guid: 0e1c806ec9cf9984f81009937504cc98, type: 3}
+  - {fileID: 21300000, guid: e1bb845fee567514fa1edbab1f1ba8f9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - characters_on_wheels-02-walking_guy_with_bicycle_08
+  - characters_on_wheels-02-walking_guy_with_bicycle_00
+  - characters_on_wheels-02-walking_guy_with_bicycle_05
+  - characters_on_wheels-02-walking_guy_with_bicycle_02
+  - characters_on_wheels-02-walking_guy_with_bicycle_01
+  - characters_on_wheels-02-walking_guy_with_bicycle_03
+  - characters_on_wheels-02-walking_guy_with_bicycle_04
+  - characters_on_wheels-02-walking_guy_with_bicycle_06
+  - characters_on_wheels-02-walking_guy_with_bicycle_07
+  - characters_on_wheels-02-walking_guy_with_bicycle_09
+  m_RenderDataMap: {}
+  m_Tag: walking_cyclist2
+  m_IsVariant: 0

@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: maloy_animation
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 605bce44379f68846bd38d254bd7702f, type: 3}
+    - {fileID: 2800000, guid: 1dabda1033556d342bfc16e5eba108f4, type: 3}
+    - {fileID: 2800000, guid: c0ab539ed05066a439730619e86026ad, type: 3}
+    - {fileID: 2800000, guid: 5afcc40af8ce3704bb5d9ed52d2523ec, type: 3}
+    - {fileID: 2800000, guid: 3ff6a06c9bd0b8945b7f9ef1e84e4980, type: 3}
+    - {fileID: 2800000, guid: 11017accd2d7f8a4ebc9317ff642c65f, type: 3}
+    - {fileID: 2800000, guid: 80d79fc7bed1c4d46a7783368a80a883, type: 3}
+    - {fileID: 2800000, guid: a86351a605efdc24a8c9769ad66addc4, type: 3}
+    - {fileID: 2800000, guid: 9b83832be37fff241b1dd080eeaf8412, type: 3}
+    - {fileID: 2800000, guid: 46c9a1cd31b0b7e42bfcb575d5c40e30, type: 3}
+    - {fileID: 2800000, guid: 7269d4a61427f834ea48fa8e075dc092, type: 3}
+    - {fileID: 2800000, guid: d4a37407b57b8ec47870579e10923c96, type: 3}
+    - {fileID: 2800000, guid: f39004d72cb182f4eaf05ad76dcc720b, type: 3}
+    - {fileID: 2800000, guid: bf503d144bcff1c4c9438c929788df43, type: 3}
+    - {fileID: 2800000, guid: 96bc3bf307a28f140a0f5b431dc08ecf, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 1dabda1033556d342bfc16e5eba108f4, type: 3}
+  - {fileID: 21300000, guid: 96bc3bf307a28f140a0f5b431dc08ecf, type: 3}
+  - {fileID: 21300000, guid: bf503d144bcff1c4c9438c929788df43, type: 3}
+  - {fileID: 21300000, guid: 605bce44379f68846bd38d254bd7702f, type: 3}
+  - {fileID: 21300000, guid: a86351a605efdc24a8c9769ad66addc4, type: 3}
+  - {fileID: 21300000, guid: 7269d4a61427f834ea48fa8e075dc092, type: 3}
+  - {fileID: 21300000, guid: d4a37407b57b8ec47870579e10923c96, type: 3}
+  - {fileID: 21300000, guid: 80d79fc7bed1c4d46a7783368a80a883, type: 3}
+  - {fileID: 21300000, guid: f39004d72cb182f4eaf05ad76dcc720b, type: 3}
+  - {fileID: 21300000, guid: 5afcc40af8ce3704bb5d9ed52d2523ec, type: 3}
+  - {fileID: 21300000, guid: 9b83832be37fff241b1dd080eeaf8412, type: 3}
+  - {fileID: 21300000, guid: 3ff6a06c9bd0b8945b7f9ef1e84e4980, type: 3}
+  - {fileID: 21300000, guid: 11017accd2d7f8a4ebc9317ff642c65f, type: 3}
+  - {fileID: 21300000, guid: 46c9a1cd31b0b7e42bfcb575d5c40e30, type: 3}
+  - {fileID: 21300000, guid: c0ab539ed05066a439730619e86026ad, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - maloy-animation_01
+  - maloy-animation_14
+  - maloy-animation_13
+  - maloy-animation_00
+  - maloy-animation_07
+  - maloy-animation_10
+  - maloy-animation_11
+  - maloy-animation_06
+  - maloy-animation_12
+  - maloy-animation_03
+  - maloy-animation_08
+  - maloy-animation_04
+  - maloy-animation_05
+  - maloy-animation_09
+  - maloy-animation_02
+  m_RenderDataMap: {}
+  m_Tag: maloy_animation
+  m_IsVariant: 0

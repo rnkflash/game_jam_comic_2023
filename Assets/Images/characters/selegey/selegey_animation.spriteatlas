@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: selegey_animation
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 72008ecd7c271c644b5ce46e4fb1616f, type: 3}
+    - {fileID: 2800000, guid: 1c7f55b0dd3ec8b4badf0f283d8e9828, type: 3}
+    - {fileID: 2800000, guid: 521d2a30c7e28d8468fb7a533866b949, type: 3}
+    - {fileID: 2800000, guid: 4a9292a3dbafabc418b5b3e813c62240, type: 3}
+    - {fileID: 2800000, guid: f74742be713a380489060865b78c12c9, type: 3}
+    - {fileID: 2800000, guid: 022171330a1fc7649991e178220bd706, type: 3}
+    - {fileID: 2800000, guid: 2f387bf24aa43d84c86abc5b54c05dcc, type: 3}
+    - {fileID: 2800000, guid: 2195e271e3497a247ae5e70beaa3b505, type: 3}
+    - {fileID: 2800000, guid: ed320828e571f0345a4f92f57fa94225, type: 3}
+    - {fileID: 2800000, guid: 5bc4cb4bd2f35044a9127fadff09a09c, type: 3}
+    - {fileID: 2800000, guid: 76cf009df0f7e944aafc28dc1aa9ba08, type: 3}
+    - {fileID: 2800000, guid: 236be568f3aba3046856a4a0adab54a6, type: 3}
+    - {fileID: 2800000, guid: 64f97a19f51ec1142a8f6750a2ed7b7b, type: 3}
+    - {fileID: 2800000, guid: 3f14f9f55f23eb54da600a9cd0b7a8ae, type: 3}
+    - {fileID: 2800000, guid: 77ace71672c0f8d4eb2a01b2b8472568, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 521d2a30c7e28d8468fb7a533866b949, type: 3}
+  - {fileID: 21300000, guid: 1c7f55b0dd3ec8b4badf0f283d8e9828, type: 3}
+  - {fileID: 21300000, guid: 2195e271e3497a247ae5e70beaa3b505, type: 3}
+  - {fileID: 21300000, guid: 2f387bf24aa43d84c86abc5b54c05dcc, type: 3}
+  - {fileID: 21300000, guid: 022171330a1fc7649991e178220bd706, type: 3}
+  - {fileID: 21300000, guid: 4a9292a3dbafabc418b5b3e813c62240, type: 3}
+  - {fileID: 21300000, guid: 3f14f9f55f23eb54da600a9cd0b7a8ae, type: 3}
+  - {fileID: 21300000, guid: 77ace71672c0f8d4eb2a01b2b8472568, type: 3}
+  - {fileID: 21300000, guid: ed320828e571f0345a4f92f57fa94225, type: 3}
+  - {fileID: 21300000, guid: 236be568f3aba3046856a4a0adab54a6, type: 3}
+  - {fileID: 21300000, guid: 64f97a19f51ec1142a8f6750a2ed7b7b, type: 3}
+  - {fileID: 21300000, guid: 5bc4cb4bd2f35044a9127fadff09a09c, type: 3}
+  - {fileID: 21300000, guid: 76cf009df0f7e944aafc28dc1aa9ba08, type: 3}
+  - {fileID: 21300000, guid: 72008ecd7c271c644b5ce46e4fb1616f, type: 3}
+  - {fileID: 21300000, guid: f74742be713a380489060865b78c12c9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - selegey-animation_02
+  - selegey-animation_01
+  - selegey-animation_07
+  - selegey-animation_06
+  - selegey-animation_05
+  - selegey-animation_03
+  - selegey-animation_13
+  - selegey-animation_14
+  - selegey-animation_08
+  - selegey-animation_11
+  - selegey-animation_12
+  - selegey-animation_09
+  - selegey-animation_10
+  - selegey-animation_00
+  - selegey-animation_04
+  m_RenderDataMap: {}
+  m_Tag: selegey_animation
+  m_IsVariant: 0

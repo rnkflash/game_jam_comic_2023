@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: scooter_walking1
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 2f12c7ed28bdcee4a8760f54547b9821, type: 3}
+    - {fileID: 2800000, guid: 2c7aa9d486213e84785a82c2b59d3a07, type: 3}
+    - {fileID: 2800000, guid: 2a28024a88cbe064da414bf84d90e817, type: 3}
+    - {fileID: 2800000, guid: 4416dbbc560ab50449fd4e18832c0f01, type: 3}
+    - {fileID: 2800000, guid: 21ec95ee6b235e44e80b7d657af39372, type: 3}
+    - {fileID: 2800000, guid: 87e2f8c33e31fb0449ade9bcb78d8e84, type: 3}
+    - {fileID: 2800000, guid: 5cb52def6560c63479f3c0579865cb51, type: 3}
+    - {fileID: 2800000, guid: 4d3f48c0ed6cfce46948cd4db6d2f2b1, type: 3}
+    - {fileID: 2800000, guid: 35b03c65816d5ab4aaf850c4bb6af439, type: 3}
+    - {fileID: 2800000, guid: 06806dbc607625f4abc4b4479bfb9401, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 4d3f48c0ed6cfce46948cd4db6d2f2b1, type: 3}
+  - {fileID: 21300000, guid: 87e2f8c33e31fb0449ade9bcb78d8e84, type: 3}
+  - {fileID: 21300000, guid: 2c7aa9d486213e84785a82c2b59d3a07, type: 3}
+  - {fileID: 21300000, guid: 35b03c65816d5ab4aaf850c4bb6af439, type: 3}
+  - {fileID: 21300000, guid: 2a28024a88cbe064da414bf84d90e817, type: 3}
+  - {fileID: 21300000, guid: 4416dbbc560ab50449fd4e18832c0f01, type: 3}
+  - {fileID: 21300000, guid: 06806dbc607625f4abc4b4479bfb9401, type: 3}
+  - {fileID: 21300000, guid: 2f12c7ed28bdcee4a8760f54547b9821, type: 3}
+  - {fileID: 21300000, guid: 21ec95ee6b235e44e80b7d657af39372, type: 3}
+  - {fileID: 21300000, guid: 5cb52def6560c63479f3c0579865cb51, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - characters_on_wheels-01-walking_guy_with_scooter_07
+  - characters_on_wheels-01-walking_guy_with_scooter_05
+  - characters_on_wheels-01-walking_guy_with_scooter_01
+  - characters_on_wheels-01-walking_guy_with_scooter_08
+  - characters_on_wheels-01-walking_guy_with_scooter_02
+  - characters_on_wheels-01-walking_guy_with_scooter_03
+  - characters_on_wheels-01-walking_guy_with_scooter_09
+  - characters_on_wheels-01-walking_guy_with_scooter_00
+  - characters_on_wheels-01-walking_guy_with_scooter_04
+  - characters_on_wheels-01-walking_guy_with_scooter_06
+  m_RenderDataMap: {}
+  m_Tag: scooter_walking1
+  m_IsVariant: 0

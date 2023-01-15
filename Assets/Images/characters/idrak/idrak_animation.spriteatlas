@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: idrak_animation
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 7ec7b807fa10f2d4487c9d16e90dc784, type: 3}
+    - {fileID: 2800000, guid: 508eb8aaa23576246b68cc8675c3e02e, type: 3}
+    - {fileID: 2800000, guid: ca0f831e598eeb946bace69668424ec7, type: 3}
+    - {fileID: 2800000, guid: 2c50ef7d6135b0641ae157aa39b9ffe3, type: 3}
+    - {fileID: 2800000, guid: b10679495a422a6418ba897010a0c5ee, type: 3}
+    - {fileID: 2800000, guid: 9749634aea127ca43ada5349e5be7f79, type: 3}
+    - {fileID: 2800000, guid: 333729d126681754dbbd1c32405fb85c, type: 3}
+    - {fileID: 2800000, guid: b35cf25724a8f854b8e5968ded2754b1, type: 3}
+    - {fileID: 2800000, guid: 8d83e4bf711750941bcf5dfb30c3279a, type: 3}
+    - {fileID: 2800000, guid: aa0012cb3e85bc64485384aa60327a3e, type: 3}
+    - {fileID: 2800000, guid: e5ff723e7e7f3aa49b5148c65c6c5429, type: 3}
+    - {fileID: 2800000, guid: 9713781daa416e647b8658122424d714, type: 3}
+    - {fileID: 2800000, guid: a813a50769d4924449d5589e69e9cb63, type: 3}
+    - {fileID: 2800000, guid: 7448a361196f88e4793d77df4ebbf12c, type: 3}
+    - {fileID: 2800000, guid: ccdcd8edfbd8d6f428a15d6a7b93ce23, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 7448a361196f88e4793d77df4ebbf12c, type: 3}
+  - {fileID: 21300000, guid: 333729d126681754dbbd1c32405fb85c, type: 3}
+  - {fileID: 21300000, guid: a813a50769d4924449d5589e69e9cb63, type: 3}
+  - {fileID: 21300000, guid: 7ec7b807fa10f2d4487c9d16e90dc784, type: 3}
+  - {fileID: 21300000, guid: b35cf25724a8f854b8e5968ded2754b1, type: 3}
+  - {fileID: 21300000, guid: b10679495a422a6418ba897010a0c5ee, type: 3}
+  - {fileID: 21300000, guid: 9749634aea127ca43ada5349e5be7f79, type: 3}
+  - {fileID: 21300000, guid: 508eb8aaa23576246b68cc8675c3e02e, type: 3}
+  - {fileID: 21300000, guid: aa0012cb3e85bc64485384aa60327a3e, type: 3}
+  - {fileID: 21300000, guid: 9713781daa416e647b8658122424d714, type: 3}
+  - {fileID: 21300000, guid: 2c50ef7d6135b0641ae157aa39b9ffe3, type: 3}
+  - {fileID: 21300000, guid: ccdcd8edfbd8d6f428a15d6a7b93ce23, type: 3}
+  - {fileID: 21300000, guid: ca0f831e598eeb946bace69668424ec7, type: 3}
+  - {fileID: 21300000, guid: e5ff723e7e7f3aa49b5148c65c6c5429, type: 3}
+  - {fileID: 21300000, guid: 8d83e4bf711750941bcf5dfb30c3279a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - idrak-animation_13
+  - idrak-animation_06
+  - idrak-animation_12
+  - idrak-animation_00
+  - idrak-animation_07
+  - idrak-animation_04
+  - idrak-animation_05
+  - idrak-animation_01
+  - idrak-animation_09
+  - idrak-animation_11
+  - idrak-animation_03
+  - idrak-animation_14
+  - idrak-animation_02
+  - idrak-animation_10
+  - idrak-animation_08
+  m_RenderDataMap: {}
+  m_Tag: idrak_animation
+  m_IsVariant: 0
