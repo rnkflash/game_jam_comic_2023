@@ -15,11 +15,11 @@ MonoBehaviour:
   id: card_kpp
   enabled: 1
   conditions:
-    priority: 0
+    priority: 10
     triggers: []
     resources:
     - resource: 3
-      min: 19000
+      min: 19900
       max: 0
   dialogs:
   - id: 0
