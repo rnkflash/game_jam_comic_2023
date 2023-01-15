@@ -62,10 +62,6 @@ public class GameController : MonoBehaviour
 
                     EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
                     EventBus<CarMovedDistance>.Pub(new CarMovedDistance());
-                    state = GameState.RandomRoadMove;
-                    break;
-                case GameState.RandomRoadMove:
-                    yield return roadMoveController.Move();
                     state = GameState.SituationStart;
                     break;
                 case GameState.SituationStart:
@@ -94,8 +90,12 @@ public class GameController : MonoBehaviour
                     if (Player.Instance.dialog != -1)
                         state = GameState.Dialog;
                     else
-                        state = GameState.WinCheck;
+                        state = GameState.RandomRoadMove;
 
+                    break;
+                case GameState.RandomRoadMove:
+                    yield return roadMoveController.Move();
+                    state = GameState.WinCheck;
                     break;
                 case GameState.WinCheck:
 
@@ -106,7 +106,7 @@ public class GameController : MonoBehaviour
                     else if (Player.Instance.card == null)
                         state = GameState.Lose;
                     else
-                        state = GameState.RandomRoadMove;
+                        state = GameState.SituationStart;
                     
                     break;
                 case GameState.Win:
