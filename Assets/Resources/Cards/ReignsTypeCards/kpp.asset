@@ -19,7 +19,7 @@ MonoBehaviour:
     triggers: []
     resources:
     - resource: 3
-      min: 18000
+      min: 19300
       max: 30000
   dialogs:
   - id: 0
