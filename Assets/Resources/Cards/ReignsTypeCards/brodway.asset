@@ -15,9 +15,12 @@ MonoBehaviour:
   id: card_brodway
   enabled: 1
   conditions:
-    priority: 0
+    priority: 8
     triggers: []
-    resources: []
+    resources:
+    - resource: 3
+      min: 17500
+      max: 30000
   dialogs:
   - id: 0
     character: 3
