@@ -11,6 +11,7 @@ public class Cards : MonoBehaviour
         empty,
         hidden,
         revealed,
+        falling
     }
 
     public GameObject cardBackPrefab;
@@ -152,6 +153,8 @@ public class Cards : MonoBehaviour
     private void FallDown(float angle, float x) {
         if (state != State.revealed)
             return;
+
+        state = State.falling;
 
         cardFront.transform.DOKill();
         var clone = Instantiate(cardFront, Vector3.zero, Quaternion.identity);

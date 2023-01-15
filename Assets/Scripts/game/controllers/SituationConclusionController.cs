@@ -41,7 +41,12 @@ public class SituationConclusionController : MonoBehaviour {
 
         EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(.25f);
+
+        while (cards.state == Cards.State.falling)
+        {
+            yield return null;
+        }
 
         state = SituationConclusionControllerState.Exit;
         while (state != SituationConclusionControllerState.Exit)

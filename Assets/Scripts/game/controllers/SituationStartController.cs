@@ -53,7 +53,7 @@ public class SituationStartController : MonoBehaviour
     if (countCards == 0)
       selectedCard = null;
     else {
-      selectedCard = availableCards.First();
+      selectedCard = availableCards.ElementAt(Random.Range(0, availableCards.Count - 1));
     }
 
     if (selectedCard != null) {
