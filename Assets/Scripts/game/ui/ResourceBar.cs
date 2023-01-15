@@ -43,7 +43,5 @@ public class ResourceBar : MonoBehaviour
         var distanceLeft = Mathf.Clamp(Balance.values.max_distance - Player.Instance.GetResource(Resource.distance), 0, Balance.values.max_distance);
         distanceBar.text = $"{distanceLeft} км";
 
-        debugTriggers.text = "";
-        Player.Instance.triggers.ForEach(trigger=>debugTriggers.text += Enum.GetName(typeof(Trigger), trigger));
     }
 }

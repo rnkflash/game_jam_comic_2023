@@ -11,6 +11,7 @@ public enum SituationConclusionControllerState {
 public class SituationConclusionController : MonoBehaviour {
 
     private SituationConclusionControllerState state;
+    public Cards cards;
     public IEnumerator StartConclusion()
     {
         state = SituationConclusionControllerState.Start;
@@ -21,10 +22,22 @@ public class SituationConclusionController : MonoBehaviour {
         Player.Instance.dialog = -1;
         choice.actions.ForEach(action => DoAction(action.data));
 
-        if (Player.Instance.dialog == -1)
+        var dialog = Player.Instance.GetCurrentDialog();
+        var prevDialog = Player.Instance.GetPrevDialog();
+
+        if (dialog == null || (prevDialog != null && dialog.character != prevDialog.character)) {
+            if (Player.Instance.choice == Choice.Left)
+                cards.FallDownLeft();
+            else
+                cards.FallDownRight();
+        }
+        
+        if (Player.Instance.dialog == -1) {
+
             Balance.values.each_card_resources.ForEach(r => {
                 Player.Instance.AddResource(r.type, r.amount);
             });
+        }
 
         EventBus<PlayerResourcesChanged>.Pub(new PlayerResourcesChanged());
 

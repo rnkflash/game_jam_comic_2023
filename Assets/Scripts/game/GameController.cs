@@ -31,8 +31,6 @@ public class GameController : MonoBehaviour
     private LoseController loseController;
     private RoadMoveController roadMoveController;
 
-    public GameObject cardsUI;
-
     void Awake() {
         situationStartController = GetComponent<SituationStartController>();
         playerDecisionController = GetComponent<PlayerDecisionController>();
@@ -66,9 +64,7 @@ public class GameController : MonoBehaviour
                     state = GameState.RandomRoadMove;
                     break;
                 case GameState.RandomRoadMove:
-                    cardsUI.SetActive(false);
                     yield return roadMoveController.Move();
-                    cardsUI.SetActive(true);
                     state = GameState.SituationStart;
                     break;
                 case GameState.SituationStart:

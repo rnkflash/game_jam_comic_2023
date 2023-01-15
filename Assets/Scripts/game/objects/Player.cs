@@ -14,6 +14,8 @@ public class Player: MonoBehaviour
     public List<string> usedCards;
     public Choice choice;
 
+    public List<string> dealtCards = new List<string>();
+
     void Awake() {
         Instance = this;
     }

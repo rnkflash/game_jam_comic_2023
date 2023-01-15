@@ -109,10 +109,9 @@ public class Cards : MonoBehaviour
                 {
                     noCards = false;
                     cardBack.SetActive(true);
+                    if (state == State.empty)
+                        state = State.hidden;
                 }
-
-                if (state == State.empty)
-                    state = State.hidden;
             });
         }
         

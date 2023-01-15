@@ -12,8 +12,8 @@ public class PlayerDecisionController : MonoBehaviour {
 
     private PlayerDecisionControllerState state;
 
-    public GameObject ui;
     public GameObject dialogUI;
+    public Cards cards;
 
     void Awake() {
         EventBus<PlayerDecisionMade>.Sub(OnPlayerDecision);
@@ -27,8 +27,6 @@ public class PlayerDecisionController : MonoBehaviour {
     {
         state = PlayerDecisionControllerState.Start;
         
-        ui.SetActive(true);
-
         while (state != PlayerDecisionControllerState.Exit)
         {
             yield return null;
@@ -38,8 +36,9 @@ public class PlayerDecisionController : MonoBehaviour {
     private void OnPlayerDecision(PlayerDecisionMade msg) {
         Player.Instance.choice = msg.decision;
 
+        cards.StopLeaning();
+
         state = PlayerDecisionControllerState.Exit;
-        ui.SetActive(false);
         dialogUI.SetActive(false);
     }
 }

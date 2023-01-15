@@ -16,33 +16,44 @@ public enum SituationStartControllerState
 public class SituationStartController : MonoBehaviour
 {
   private SituationStartControllerState state;
+  public Cards cards;
+  
 
   public IEnumerator StartNextSituation()
   {
-    Player.Instance.card = GetAvailableCardOrNull();
+    var availableCards = GetAvailableCards();
 
-    state = SituationStartControllerState.Exit;
-    while (state != SituationStartControllerState.Exit)
-    {
-      yield return null;
+    List<string> newCards = new List<string>();
+    List<string> removedCards = new List<string>();
+    List<string> remainedCards = new List<string>();
+    availableCards.ForEach(c=>{
+      if (!Player.Instance.dealtCards.Contains(c.id)) {
+        newCards.Add(c.id);
+      }
+    });
+    Player.Instance.dealtCards.ForEach(cid=>{
+      if (!availableCards.Any(c=>c.id == cid)) {
+        removedCards.Add(cid);
+      } else {
+        remainedCards.Add(cid);
+      }
+    });
+    Player.Instance.dealtCards = remainedCards.Concat(newCards).ToList();
+    
+    if (newCards.Count > 0) {
+      cards.AddCards(newCards.Count);
+      while (cards.state != Cards.State.hidden) {
+        yield return null;
+      }
+        
     }
-  }
-
-  private ReignsTypeCard GetAvailableCardOrNull() {
-    var availableCards = CardsArray.Instance.newCards.Where(card =>
-      !Player.Instance.usedCards.Any(id => id == card.id) 
-      && card.enabled
-      && PlayerHasMetConditions(card.conditions)
-    ).ToList();
 
     ReignsTypeCard selectedCard;
     var countCards = availableCards.Count();
     if (countCards == 0)
       selectedCard = null;
     else {
-      var sortedCards = availableCards.OrderByDescending(o=>o.conditions.priority).ToList()
-        .OrderBy(o=>o.conditions.resources.Find(r=>r.resource == Resource.distance)?.min ?? 0);
-      selectedCard = sortedCards.First();
+      selectedCard = availableCards.First();
     }
 
     if (selectedCard != null) {
@@ -51,7 +62,24 @@ public class SituationStartController : MonoBehaviour
       Player.Instance.dialog = selectedCard.dialogs[0].id;
     }
 
-    return selectedCard;
+    Player.Instance.card = selectedCard;
+
+    state = SituationStartControllerState.Exit;
+    while (state != SituationStartControllerState.Exit)
+    {
+      yield return null;
+    }
+  }
+
+  private List<ReignsTypeCard> GetAvailableCards() {
+    var availableCards = CardsArray.Instance.newCards.Where(card =>
+      !Player.Instance.usedCards.Any(id => id == card.id) 
+      && card.enabled
+      && PlayerHasMetConditions(card.conditions)
+    ).ToList();
+
+    return availableCards.OrderByDescending(o=>o.conditions.priority).ToList()
+        .OrderBy(o=>o.conditions.resources.Find(r=>r.resource == Resource.distance)?.min ?? 0).ToList();
   }
 
     private bool PlayerHasMetConditions(ReignsTypeCard.Condition conditions)

@@ -16,8 +16,7 @@ namespace game
   {
     private DialogueControllerState state;
 
-    public GameObject frontCard;
-    public GameObject backCard;
+    public Cards cards;
     public GameObject dialogUI;
     public TMP_Text text;
     public TMP_Text rightChoiceText;
@@ -43,28 +42,9 @@ namespace game
       var prevDialog = Player.Instance.GetPrevDialog();
 
       if (prevDialog == null || prevDialog.character != dialog.character) {
-        frontCard.SetActive(false);
-        backCard.SetActive(false);
 
-        yield return new WaitForSeconds(0.25f);
-
-        frontCard.SetActive(false);
-        backCard.SetActive(true);
-
-        yield return new WaitForSeconds(0.25f);
-
-        var character = Characters.Instance.GetCharacterCard(dialog.character);
-        var backImage = backCard.GetComponent<Image>();
-        var frontImage = frontCard.GetComponent<Image>();
-        Sprite spr;
-        if (character != null)
-          spr = character.image;
-        else
-          spr = backImage.sprite;
-        frontImage.sprite = spr;
-
-        frontCard.SetActive(true);
-        backCard.SetActive(false);
+        var character = Characters.Instance.GetCharacterCard(dialog.character)?.image ?? Characters.Instance.GetCharacterCard(Character.NO).image;
+        cards.FlipFrontCard(character, Player.Instance.dealtCards.Count == 1);
 
         yield return new WaitForSeconds(0.25f);
       }
