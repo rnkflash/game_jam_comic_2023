@@ -15,7 +15,7 @@ MonoBehaviour:
   id: card_tutorail
   enabled: 1
   conditions:
-    priority: 0
+    priority: 10
     triggers: []
     resources: []
   dialogs:
