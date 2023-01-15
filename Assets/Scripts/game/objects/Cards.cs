@@ -139,7 +139,7 @@ public class Cards : MonoBehaviour
             return;
         cardFront.transform.DOKill();
         cardFront.transform.DORotate(new Vector3(0,0,0), 0.25f);
-        SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("lean_card"));
+        //SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("lean_card"));
     }
 
     public void FallDownLeft() {
