@@ -19,8 +19,8 @@ MonoBehaviour:
     triggers: []
     resources:
     - resource: 3
-      min: 19300
-      max: 30000
+      min: 19150
+      max: 2300
   dialogs:
   - id: 0
     character: 16
@@ -58,7 +58,7 @@ MonoBehaviour:
           rid: 2448774329981468762
   - id: 2
     character: 16
-    text: "\u0427\u0435\u0439 \u041A\u0440\u044B\u043C?"
+    text: "\u0427\u0435\u0439 \u043A\u0440\u044B\u043C?"
     choiceLeft:
       text: "\u041D\u0430\u0448!"
       aftermath: 
@@ -87,21 +87,18 @@ MonoBehaviour:
       actions: []
   - id: 4
     character: 16
-    text: "\u041E\u0442\u0432\u0435\u0442 \u043D\u0435\u0432\u0435\u0440\u043D\u044B\u0439"
+    text: "\u041E\u043D \u0441\u0443\u0440\u043E\u0432\u043E \u0441\u043C\u043E\u0442\u0440\u0438\u0442
+      \u043D\u0430 \u0432\u0430\u0441, \"\u0422\u0430\u043A \u0438 \u0431\u044B\u0442\u044C,
+      \u043F\u0440\u043E\u0435\u0437\u0436\u0430\u0439\u0442\u0435, \u0434\u043E\u0431\u0440\u043E
+      \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C \u0432 \u0413\u0440\u0443\u0437\u0438\u044E\" "
     choiceLeft:
-      text: "\u0427\u0442\u043E?"
+      text: "\u0423\u0440\u0430!"
       aftermath: 
-      actions:
-      - type: 0
-        data:
-          rid: 2448774329981468769
+      actions: []
     choiceRight:
-      text: "\u041D\u043E \u043F\u043E\u0447\u0435\u043C\u0443?"
+      text: "\u0423\u0440\u0430!"
       aftermath: 
-      actions:
-      - type: 0
-        data:
-          rid: 2448774329981468770
+      actions: []
   references:
     version: 2
     RefIds:
@@ -119,7 +116,7 @@ MonoBehaviour:
       type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
       data:
         type: 1
-        id: 4
+        id: 2
     - rid: 2448774329981468762
       type: {class: ReignsTypeCard/DialogAction, ns: , asm: Assembly-CSharp}
       data:
@@ -135,15 +132,3 @@ MonoBehaviour:
       data:
         type: 1
         id: 3
-    - rid: 2448774329981468769
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 1
-        amount: -100000
-    - rid: 2448774329981468770
-      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
-      data:
-        type: 0
-        resource: 1
-        amount: -100000
