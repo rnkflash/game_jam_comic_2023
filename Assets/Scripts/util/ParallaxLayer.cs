@@ -23,7 +23,8 @@ public class ParallaxLayer : MonoBehaviour
             transform.position = offsetX + Vector3.Scale(new Vector3(_camera.position.x, 0, 0), movementScale);
 
             if (_camera.position.x > transform.position.x + width) {
-                offsetX = new Vector3(width + offsetX.x + cameraWidth, offsetX.y, offsetX.z);
+                var newOffset = width + offsetX.x + cameraWidth;
+                offsetX = new Vector3(newOffset, offsetX.y, offsetX.z);
             }
         }
 
