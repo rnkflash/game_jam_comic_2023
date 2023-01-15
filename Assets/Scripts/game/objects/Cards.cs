@@ -74,16 +74,19 @@ public class Cards : MonoBehaviour
     public void LeanRight() {
         cardFront.transform.DOKill();
         cardFront.transform.DORotate(new Vector3(0,0,-30), 0.25f);
+        SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("lean_card"));
     }
 
     public void LeanLeft() {
         cardFront.transform.DOKill();
         cardFront.transform.DORotate(new Vector3(0,0,30), 0.25f);
+        SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("lean_card"));
     }
 
     public void StopLeaning() {
         cardFront.transform.DOKill();
         cardFront.transform.DORotate(new Vector3(0,0,0), 0.25f);
+        SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("lean_card"));
     }
 
     public void FallDownLeft() {
@@ -111,6 +114,8 @@ public class Cards : MonoBehaviour
         image.DOFade(0.0f, 0.26f).SetDelay(0.1f).OnComplete(()=>{
             Destroy(clone);
         });
+
+        SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("fall_card"));
     }
 
 }
