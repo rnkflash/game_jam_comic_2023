@@ -76,10 +76,10 @@ MonoBehaviour:
       data:
         type: 0
         resource: 2
-        amount: -150
+        amount: -100
     - rid: 418072007160889383
       type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
       data:
         type: 0
         resource: 2
-        amount: -150
+        amount: -100

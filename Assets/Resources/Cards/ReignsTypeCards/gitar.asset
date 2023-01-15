@@ -40,6 +40,9 @@ MonoBehaviour:
       - type: 0
         data:
           rid: 418072007160889565
+      - type: 0
+        data:
+          rid: 418072033446854668
   - id: 1
     character: 42
     text: "\u041D\u043E\u0433\u0438 \u0443\u0441\u0442\u0430\u043B\u0438, \u0431\u0443\u0432\u0430\u043B\u044C\u043D\u043E
@@ -79,4 +82,10 @@ MonoBehaviour:
       data:
         type: 0
         resource: 0
-        amount: -200
+        amount: -100
+    - rid: 418072033446854668
+      type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
+      data:
+        type: 0
+        resource: 0
+        amount: -100
