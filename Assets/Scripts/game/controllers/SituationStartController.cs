@@ -48,12 +48,22 @@ public class SituationStartController : MonoBehaviour
         
     }
 
-    ReignsTypeCard selectedCard;
-    var countCards = availableCards.Count();
-    if (countCards == 0)
-      selectedCard = null;
-    else {
-      selectedCard = availableCards.ElementAt(Random.Range(0, availableCards.Count - 1));
+    ReignsTypeCard selectedCard = null;
+    if (availableCards.Count() > 0) {
+      var GroupByPriority = availableCards.GroupBy(s => s.conditions.priority)
+                            .OrderByDescending(c => c.Key)
+                            .Select(std => new {
+                                Key = std.Key,
+                                Cards = std.ToList()
+                            });
+
+      foreach (var group in GroupByPriority)
+      {
+        if (group.Cards.Count > 0) {
+          selectedCard = group.Cards.ElementAt(Random.Range(0, group.Cards.Count - 1));
+          break;
+        }
+      }
     }
 
     if (selectedCard != null) {
