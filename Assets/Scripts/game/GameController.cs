@@ -126,7 +126,7 @@ public class GameController : MonoBehaviour
 
     private static bool LooseCheck()
     {
-        var requiredResources = new List<Resource>() {Resource.food, Resource.fuel, Resource.money};
+        var requiredResources = new List<Resource>() {Resource.food, Resource.fuel};
         return requiredResources.Any(r => Player.Instance.GetResource(r) <= 0);
     }
 
