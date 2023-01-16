@@ -183,5 +183,5 @@ MonoBehaviour:
       type: {class: ReignsTypeCard/ResourceAction, ns: , asm: Assembly-CSharp}
       data:
         type: 0
-        resource: 1
+        resource: 2
         amount: 200
