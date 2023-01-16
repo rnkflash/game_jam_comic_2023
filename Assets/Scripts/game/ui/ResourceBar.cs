@@ -45,7 +45,7 @@ public class ResourceBar : MonoBehaviour
 
     private void OnCarMoved(CarMovedDistance message)
     {
-        distanceBar.text = $"{(Balance.values.max_distance - message.distance * 100.0f).ToString("F0")} м";
+        distanceBar.text = $"{(Mathf.Clamp(Balance.values.max_distance - message.distance * 100.0f, 0, 999999)).ToString("F0")} м";
     }
 
 }
