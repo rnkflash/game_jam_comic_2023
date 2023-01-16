@@ -40,7 +40,6 @@ public class RoadMoveController : MonoBehaviour
         Player.Instance.movedDistance = Player.Instance.GetResource(Resource.distance);
         car.Move(distanceToMove / 100.0f);
         state = State.Moving;
-        
     }
 
     private float sendDistance = 0.0f;

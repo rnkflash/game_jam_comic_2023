@@ -18,12 +18,14 @@ public class LoseController : MonoBehaviour
     public Image bg;
     public GameObject popup;
     public TMP_Text pressAnyKeyText;
+    public GameObject text;
 
     public IEnumerator Show()
     { 
         state = LoseControllerState.Start;
 
         ui.SetActive(true);
+        text.SetActive(true);
         SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("paper_check"));
 
         bg.DOFade(0.9f, 0.5f);
@@ -31,6 +33,7 @@ public class LoseController : MonoBehaviour
         var origPos = popup.transform.position;
         popup.transform.position = new Vector3(origPos.x, 1000, origPos.z);
         popup.transform.DOMove(origPos, 0.5f).SetEase(Ease.OutCubic).OnComplete(()=> {
+            //text.SetActive(true);
             pressAnyKeyText.DOFade(1, .25f);
             state = LoseControllerState.PressAnyKey;
         });
