@@ -2,4 +2,4 @@
 
 ## страничка на itch.io
 
-https://rnkishi.itch.io/game_jam_comic_2023
+https://rnkishi.itch.io/pora-valit
